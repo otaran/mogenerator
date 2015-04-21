@@ -1,8 +1,6 @@
 /* FoundationAdditions.h created by lindberg on Mon 20-Dec-1999 */
 
-#import <Foundation/NSArray.h>
-#import <Foundation/NSString.h>
-#import <Foundation/NSFileManager.h>
+#import <Foundation/Foundation.h>
 
 extern void ErrVPrintf(NSString *format, va_list arguments);
 extern void ErrPrintf(NSString *format, ...);

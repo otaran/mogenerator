@@ -30,8 +30,7 @@
  */
 
 #import "FoundationAdditions.h"
-#import <Foundation/Foundation.h>
-#import "NSString+MiscAdditions.h"
+#import <MiscMerge/NSString+MiscAdditions.h>
 
 
 /* Writes to stderr */

@@ -6,13 +6,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-#import "MiscMergeTemplate.h"
-#import "MiscMergeCommandBlock.h"
-#import "MiscMergeEngine.h"
-#import "FoundationAdditions.h"
-#import "nsenumerate.h"
-#import "NSString+MiscAdditions.h"
-#import "DDCommandLineInterface.h"
+#import <ddcli/DDCommandLineInterface.h>
 
 @interface NSManagedObjectModel (entitiesWithACustomSubclassVerbose)
 - (NSArray*)entitiesWithACustomSubclassInConfiguration:(NSString*)configuration_ verbose:(BOOL)verbose_;

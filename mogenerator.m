@@ -6,6 +6,13 @@
 #import "mogenerator.h"
 #import <RegexKitLite/RegexKitLite.h>
 
+#import <MiscMerge/MiscMergeTemplate.h>
+#import <MiscMerge/MiscMergeCommandBlock.h>
+#import <MiscMerge/MiscMergeEngine.h>
+#import "FoundationAdditions.h"
+#import "nsenumerate.h"
+#import <MiscMerge/NSString+MiscAdditions.h>
+
 static NSString * const kTemplateVar = @"TemplateVar";
 NSString  *gCustomBaseClass;
 NSString  *gCustomBaseClassImport;
