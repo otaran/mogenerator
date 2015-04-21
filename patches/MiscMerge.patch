@@ -1,0 +1,99 @@
+diff --git a/Pods/MiscMerge/MiscMergeExpression.m b/Pods/MiscMerge/MiscMergeExpression.m
+index 40dc58e..32629c6 100755
+--- a/Pods/MiscMerge/MiscMergeExpression.m
++++ b/Pods/MiscMerge/MiscMergeExpression.m
+@@ -418,7 +418,7 @@ static NSNumber *FALSE_VALUE;
+ {
+     self = [super init];
+     if ( self ) {
+-        expressions = [list retain];
++        expressions = [list mutableCopy];
+     }
+     return self;
+ }
+@@ -441,14 +441,14 @@ static NSNumber *FALSE_VALUE;
+ 
+ - (NSString *)description
+ {
+-    NSInteger index, count = [expressions count];
++    NSUInteger index, count = [expressions count];
+     NSMutableString *string = [NSMutableString stringWithFormat:@"%@(", [self nameDescription]];
+     
+     for ( index = 0; index < count; index++ ) {
+         if ( index > 0 )
+             [string appendString:@","];
+ 
+-        [string appendFormat:@"%d=%@", index, [expressions objectAtIndex:index]];
++        [string appendFormat:@"%lu=%@", (unsigned long)index, [expressions objectAtIndex:index]];
+     }
+ 
+     [string appendString:@")"];
+diff --git a/Pods/MiscMerge/MiscMergeTemplate.m b/Pods/MiscMerge/MiscMergeTemplate.m
+index be29361..b85813a 100755
+--- a/Pods/MiscMerge/MiscMergeTemplate.m
++++ b/Pods/MiscMerge/MiscMergeTemplate.m
+@@ -129,13 +129,25 @@
+     return self;
+ }
+ 
++/* helper method to load string contents of filenames */
++- (NSString *) contentsOfFileWithName:(NSString *)filename {
++    NSError *error = nil;
++    NSString *fileString = [NSString stringWithContentsOfFile:filename
++                                                     encoding:NSASCIIStringEncoding
++                                                        error:&error];
++    
++    if (error != nil) {
++        NSLog(@"%@: Could not read template file %@ because %@", [self class], filename, [error localizedDescription]);   
++    }
++    return fileString;
++}
++
+ /*"
+  * Loads the contents of filename, then calls -#initWithString:.
+ "*/
+ - initWithContentsOfFile:(NSString *)filename
+ {
+-    NSString *fileString = [[[NSString alloc] initWithContentsOfFile:filename] autorelease];
+-    if (fileString == nil) NSLog(@"%@: Could not read template file %@", [self class], filename);
++    NSString *fileString = [self contentsOfFileWithName:filename];
+     return [self initWithString:fileString];
+ }
+ 
+@@ -432,11 +444,9 @@
+ "*/
+ - (void)parseContentsOfFile:(NSString *)filename
+ {
+-    NSString *string = [[NSString alloc] initWithContentsOfFile:filename];
+-    if (string == nil) NSLog(@"%@: Could not read template file %@", [self class], filename);
++    NSString *string = [self contentsOfFileWithName:filename];
+     [self setFilename:filename];
+     [self parseString:string];
+-    [string release];
+ }
+ 
+ /*"
+diff --git a/Pods/MiscMerge/_MiscMergeIncludeCommand.m b/Pods/MiscMerge/_MiscMergeIncludeCommand.m
+index fb08961..0675a28 100755
+--- a/Pods/MiscMerge/_MiscMergeIncludeCommand.m
++++ b/Pods/MiscMerge/_MiscMergeIncludeCommand.m
+@@ -52,8 +52,9 @@
+ 
+     resolvedFilename = [template resolveTemplateFilename:filename];
+ 
++    NSError *error = nil;
+     if ([resolvedFilename length] > 0)
+-        fileString = [[[NSString alloc] initWithContentsOfFile:resolvedFilename] autorelease];
++        fileString = [NSString stringWithContentsOfFile:resolvedFilename encoding:NSASCIIStringEncoding error:&error];
+ 
+     if (fileString)
+     {
+@@ -72,7 +73,7 @@
+     }
+     else
+     {
+-        [template reportParseError:@"%@: Could not load from file '%@'", [self class], resolvedFilename];
++        [template reportParseError:@"%@: Could not load from file '%@' because %@", [self class], resolvedFilename, [error localizedDescription]];
+     }
+ 
+     return YES;

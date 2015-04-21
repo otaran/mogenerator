@@ -418,7 +418,7 @@ static NSNumber *FALSE_VALUE;
 {
     self = [super init];
     if ( self ) {
-        expressions = [list retain];
+        expressions = [list mutableCopy];
     }
     return self;
 }
@@ -441,14 +441,14 @@ static NSNumber *FALSE_VALUE;
 
 - (NSString *)description
 {
-    NSInteger index, count = [expressions count];
+    NSUInteger index, count = [expressions count];
     NSMutableString *string = [NSMutableString stringWithFormat:@"%@(", [self nameDescription]];
     
     for ( index = 0; index < count; index++ ) {
         if ( index > 0 )
             [string appendString:@","];
 
-        [string appendFormat:@"%d=%@", index, [expressions objectAtIndex:index]];
+        [string appendFormat:@"%lu=%@", (unsigned long)index, [expressions objectAtIndex:index]];
     }
 
     [string appendString:@")"];
