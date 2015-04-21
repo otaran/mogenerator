@@ -4,7 +4,7 @@
 //   http://github.com/rentzsch/mogenerator
 
 #import "mogenerator.h"
-#import "RegexKitLite.h"
+#import <RegexKitLite/RegexKitLite.h>
 
 static NSString * const kTemplateVar = @"TemplateVar";
 NSString  *gCustomBaseClass;

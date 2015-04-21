@@ -1,0 +1,14 @@
+PODS:
+  - RegexKitLite (3.3)
+
+DEPENDENCIES:
+  - RegexKitLite (from `RegexKitLite.podspec.json`)
+
+EXTERNAL SOURCES:
+  RegexKitLite:
+    :podspec: RegexKitLite.podspec.json
+
+SPEC CHECKSUMS:
+  RegexKitLite: 5048678da9ef4553cb01d986fbf7b64bb9ff3d19
+
+COCOAPODS: 0.36.4
