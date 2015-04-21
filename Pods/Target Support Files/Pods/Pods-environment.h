@@ -18,3 +18,9 @@
 #define COCOAPODS_VERSION_MINOR_RegexKitLite 3
 #define COCOAPODS_VERSION_PATCH_RegexKitLite 0
 
+// ddcli
+#define COCOAPODS_POD_AVAILABLE_ddcli
+#define COCOAPODS_VERSION_MAJOR_ddcli 1
+#define COCOAPODS_VERSION_MINOR_ddcli 0
+#define COCOAPODS_VERSION_PATCH_ddcli 0
+

@@ -1,18 +1,23 @@
 PODS:
+  - ddcli (1.0)
   - MiscMerge (1.0)
   - RegexKitLite (3.3)
 
 DEPENDENCIES:
+  - ddcli (from `ddcli.podspec.json`)
   - MiscMerge (from `MiscMerge.podspec.json`)
   - RegexKitLite (from `RegexKitLite.podspec.json`)
 
 EXTERNAL SOURCES:
+  ddcli:
+    :podspec: ddcli.podspec.json
   MiscMerge:
     :podspec: MiscMerge.podspec.json
   RegexKitLite:
     :podspec: RegexKitLite.podspec.json
 
 SPEC CHECKSUMS:
+  ddcli: efc14685cd4a1e6b7d3dff01e33231720ee27772
   MiscMerge: aaaa05835a2d11fe85c867c4b03963b17b148b0c
   RegexKitLite: 5048678da9ef4553cb01d986fbf7b64bb9ff3d19
 
