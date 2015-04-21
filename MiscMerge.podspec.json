@@ -1,0 +1,20 @@
+{
+  "name": "MiscMerge",
+  "platforms": "osx",
+  "version": "1.0",
+  "license": {
+    "type": "unknown",
+    "file": "MiscKit License Notes.markdown"
+  },
+  "summary": "MiscMerge",
+  "homepage": "https://github.com/rentzsch/MiscMerge",
+  "authors": {
+    "Don Yacktman": "http://www.yacktman.org/don/index.html"
+  },
+  "source": {
+    "git": "https://github.com/rentzsch/MiscMerge.git",
+    "commit": "161869615a4b116e47e6adb3e1ff455ea8d8629b"
+  },
+  "source_files": "**/*.{h,m}",
+  "requires_arc": false
+}

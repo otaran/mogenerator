@@ -1,14 +1,19 @@
 PODS:
+  - MiscMerge (1.0)
   - RegexKitLite (3.3)
 
 DEPENDENCIES:
+  - MiscMerge (from `MiscMerge.podspec.json`)
   - RegexKitLite (from `RegexKitLite.podspec.json`)
 
 EXTERNAL SOURCES:
+  MiscMerge:
+    :podspec: MiscMerge.podspec.json
   RegexKitLite:
     :podspec: RegexKitLite.podspec.json
 
 SPEC CHECKSUMS:
+  MiscMerge: aaaa05835a2d11fe85c867c4b03963b17b148b0c
   RegexKitLite: 5048678da9ef4553cb01d986fbf7b64bb9ff3d19
 
 COCOAPODS: 0.36.4

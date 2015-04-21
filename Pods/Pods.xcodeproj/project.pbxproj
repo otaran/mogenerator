@@ -7,191 +7,533 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08B443B4F05D2C9583B0F0F7 /* Pods-RegexKitLite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9DDA02C2ED0E1B539EB3ED /* Pods-RegexKitLite-dummy.m */; };
-		3E2E7BCA8B0F8DCA3A5F8657 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C11D3BA251C084AF3E459919 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		700342155627D71FF955411D /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B81A8D8F44644916383E7425 /* Pods-dummy.m */; };
-		85E3F4A268888CCE14945D36 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = E7870E7031AB3C5874686B3E /* RegexKitLite.h */; };
-		B53E175C9B40B157C7FF0C69 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A2171895EACCA5B054C2D /* Cocoa.framework */; };
-		D2126B74941001D0DBC1DEDC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A2171895EACCA5B054C2D /* Cocoa.framework */; };
+		0001DD5F538A7701BBF77399 /* _MiscMergeLoopCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 060B27229B7C492D5AAA7D32 /* _MiscMergeLoopCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0298BD71496C7E6C9E43FDDA /* _MiscMergeDateCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = E77FC1CECF02FAA3A3D931F5 /* _MiscMergeDateCommand.h */; };
+		0762DD00E116337E160CF51F /* _MiscMergeIndexCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D8ABB09E3A2A3E007A090D /* _MiscMergeIndexCommand.h */; };
+		08261B6C509478EDD2254C64 /* MiscMergeDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B16EA75D5EC6B67A92B6FED /* MiscMergeDriver.h */; };
+		09EC358A1586CD397706F0C4 /* _MiscMergeCommentCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CA2802AFB47A6A0F1C8D282 /* _MiscMergeCommentCommand.h */; };
+		09F90604DFD8CE6B48FDC6DA /* MiscMergeCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B2E2A87B3687400F2EFBB5 /* MiscMergeCommand.h */; };
+		0A4FC9434BEA941E13D1D2D1 /* _MiscMergeDelayedParseCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E910D84B49F88FE4E2359CE /* _MiscMergeDelayedParseCommand.h */; };
+		0E307A4E996FAA71880532C5 /* MiscMergeCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 834FD6968558D0DA3BDD4590 /* MiscMergeCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1ED691AEE8553B8E22DF571E /* _MiscMergeCallCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 14895981428186F20438A3DB /* _MiscMergeCallCommand.h */; };
+		223DE283B1155BA70F076210 /* _MiscMergeEndwhileCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3502FF0EE9D70CD322E6CF2E /* _MiscMergeEndwhileCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2682141AACB625FD8E3D05A7 /* KeyValue+MiscMerge.m in Sources */ = {isa = PBXBuildFile; fileRef = D53214ECF5DD4B7246B54155 /* KeyValue+MiscMerge.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2A22141B558C9128D6F4CF38 /* _MiscMergeContinueCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = CC74833F6E1B7EFBAB3E5A72 /* _MiscMergeContinueCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2B2429134E78B0B0E177ECB1 /* MiscMergeFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9F4BE7A36DD5F3057C838B /* MiscMergeFunctions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2E73F5AA2B7E27AEBDAD60A3 /* MiscMergeEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = CD044C2D2DCF444C642BC9CD /* MiscMergeEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		330FCD573FFBE07171262387 /* _MiscMergeLoopCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F7CDE2060E296E34F9C8173 /* _MiscMergeLoopCommand.h */; };
+		39A03F28C7E819DE8F3E9935 /* _MiscMergeFieldCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B21044286598D05E2C0FEB /* _MiscMergeFieldCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3BE35CD4EEF7F2F1EA36F957 /* MiscMergeExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = BFA767DED917DC84C1A2BB14 /* MiscMergeExpression.h */; };
+		3C01866F3966A04BC2E667CE /* _MiscMergeProcedureCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3EF3A4D1F293AFFFC2E9CD /* _MiscMergeProcedureCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4024FFE7BB9AE766C9272CEF /* _MiscMergeCallCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2824112FC273CD021E7799 /* _MiscMergeCallCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		40523BBEEEF9189F860A8A52 /* MiscMergeDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD6F8492338FC5A8B6AB4F5 /* MiscMergeDriver.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4A81977E51DACEA23ABE51E4 /* _MiscMergeForeachCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA3B88D0B29ECFC60DFD47B /* _MiscMergeForeachCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4CCA23321C2442ABE0BE93F1 /* _MiscMergeDebugCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = A0A0D52A5DB1AE2B250E9ADB /* _MiscMergeDebugCommand.h */; };
+		4EE736BAAD0BF23A69B6649E /* _MiscMergeIncludeCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = CE58EEBEBAB04B90184A1F59 /* _MiscMergeIncludeCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4F04F7CB88C3F851D73690E0 /* _MiscMergeIfCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F84E0D51EBDC8732E431723 /* _MiscMergeIfCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		52C15AD672A15C6F1220EC22 /* MiscMergeEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 52753B2D333EBF29FD1FD4C5 /* MiscMergeEngine.h */; };
+		5313F7105E101D2C941488A6 /* _MiscMergeOptionCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 076FEF41C94844D292C73959 /* _MiscMergeOptionCommand.h */; };
+		58CE853970863F4DB9830913 /* _MiscMergeEndifCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = A35BFB7DFE272A0ECD037B5D /* _MiscMergeEndifCommand.h */; };
+		5A79969CD50518DC1490BC7F /* _MiscMergeForeachCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 827CD9A31F9F3F4BED5FD3BF /* _MiscMergeForeachCommand.h */; };
+		5B3FB5EC349C565478315062 /* _MiscMergeEndifCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E93988AB43B4E3279A514E /* _MiscMergeEndifCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5CB4B547F80D1F629141FA3A /* NSString+MiscAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA871C49DA324A5D8EB9200 /* NSString+MiscAdditions.h */; };
+		5EDD9054D171FF241BDC418F /* MiscMergeTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CAD1AD88CC1474DC3E4560 /* MiscMergeTemplate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		619E081BAC9F585286A3951A /* _MiscMergeBreakCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = E848F6DC58DF4287D6350DA9 /* _MiscMergeBreakCommand.h */; };
+		648D3838B5B75B14014397FA /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A6DB1EF93A633FC67E9DA5 /* RegexKitLite.h */; };
+		666E9C528C245FF9D49C8CBF /* _MiscMergeEndloopCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D9A967069049E7B1B0AD9D /* _MiscMergeEndloopCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		67845061FC8E69F04BDAF482 /* NSNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC0C964CC0C146E2C1687BE /* NSNull.h */; };
+		6BBAD28E336519B0D909428D /* _MiscMergeBreakCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C0BBB8CF0995806625B349 /* _MiscMergeBreakCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6C6586720B6C1941842E8A3C /* _MiscMergeSetCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A3822E443833D2A98983FB5D /* _MiscMergeSetCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6F5BD7744E0FB096488923D2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 094904DD00291C120083C18C /* Cocoa.framework */; };
+		6FA7D891A05CD3CE2A18B842 /* _MiscMergeEndprocedureCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A8E7B34A8878BBC87A9EFA6 /* _MiscMergeEndprocedureCommand.h */; };
+		7036027CE75297050364CBCA /* NSScanner+MiscMerge.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8122ED2BB285F036CD6F78 /* NSScanner+MiscMerge.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		73E8A1D271F48698DB39A303 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 094904DD00291C120083C18C /* Cocoa.framework */; };
+		7B834799451EBBC0B29DCBB6 /* _MiscMergeIfCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 758EB93C1BF3870B6B6507A1 /* _MiscMergeIfCommand.h */; };
+		7D7B887EFBD4C584E27C8D17 /* _MiscMergeIncludeCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFE0E52938914891D1E3F30 /* _MiscMergeIncludeCommand.h */; };
+		7E1998E7133305CC592258DA /* _MiscMergeWhileCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = DB2C004BA33081AE6B5570F0 /* _MiscMergeWhileCommand.h */; };
+		820BB495A3A225F08BE60FD4 /* _MiscMergeWhileCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = E57BED2A25DDBA0EB937191E /* _MiscMergeWhileCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		83688EFA8075D71ADC8FE166 /* _MiscMergeEndwhileCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = D91AE4F60DA793E7ECABBF49 /* _MiscMergeEndwhileCommand.h */; };
+		847999196E24121CBB8EE713 /* MiscMergeFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = A388630D2BAC21DA302A7C5A /* MiscMergeFunctions.h */; };
+		8A26289758367C0A90CDE197 /* Pods-RegexKitLite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5ED04104EBDA3B5265284C8 /* Pods-RegexKitLite-dummy.m */; };
+		9942CF8E4C9876EA3F9F81B9 /* _MiscMergeEndforeachCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B8355077E9443564558A08 /* _MiscMergeEndforeachCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9AE3FEAAAB6D53C88DF1BF4B /* _MiscMergeElseifCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = EEFD0048CC45F88BE3A9E1E2 /* _MiscMergeElseifCommand.h */; };
+		9B0F8E1F212E952E522801D3 /* _MiscMergeDateCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = AEFDC491EDA241E4C7DCD554 /* _MiscMergeDateCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9D4F93AC9E32843D99EE58D9 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7B7C0B417B5448B4B1F0E0 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9F0B86CCABA39A3E5A2808CE /* _MiscMergeSetCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = AF064B5E19A81CB6B26A6AE6 /* _MiscMergeSetCommand.h */; };
+		A25B77B32824D63DD9C2E6F3 /* NSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB1916EB4D8585A9188A21A /* NSNull.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A27515F0C3DECA39D49F95C0 /* _MiscMergeElseCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = CA7866EFB2DD1382722AD1E2 /* _MiscMergeElseCommand.h */; };
+		A2AC573B6DC7DF0667832777 /* _MiscMergeElseifCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = DB16A8016A47BB02C74D95AA /* _MiscMergeElseifCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD63D924CF6B3F7412271632 /* MiscMergeTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = E1AA79E0055A9A53D8E57303 /* MiscMergeTemplate.h */; };
+		B419AA9F9AE540DF181206A7 /* _MiscMergeIdentifyCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = E834F4585EB069298499A6AE /* _MiscMergeIdentifyCommand.h */; };
+		BAD1CC5EF5DC66245CBA0772 /* _MiscMergeNextCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 88648E2B4DF934A7598D4ACE /* _MiscMergeNextCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD373739E6E992F2346BE0AC /* MiscMergeCommandBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 611B4325596922E6491ACC86 /* MiscMergeCommandBlock.h */; };
+		BFBAE50BCC2DE1ABBB58278D /* _MiscMergeOmitCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 9229EE8BF45C2D3C88306390 /* _MiscMergeOmitCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C05C882135BA984C97803314 /* _MiscMergeDebugCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4A8E79E0537646CF871B7F /* _MiscMergeDebugCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C17BD623F4D9E1F3F03AED94 /* _MiscMergeElseCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A6206B94FF711EA0EFA9BC /* _MiscMergeElseCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C3F07E742A48CA138F95A3CF /* Pods-MiscMerge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0E68273DAE2C6F67A55D3 /* Pods-MiscMerge-dummy.m */; };
+		C81325B5FA8046BEE24D9376 /* NSString+MiscAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B71A927A840DA577617001F /* NSString+MiscAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CAE70A629BA43C7024B5E7FF /* _MiscMergeCopyCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 8901187BC271A3E772CA8AD2 /* _MiscMergeCopyCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CB183AEBE0F5DA2C7C6C9879 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CA5A00B7B619186AE263A0 /* Pods-dummy.m */; };
+		CC340B0C2ED0F7B3DCB45A64 /* _MiscMergeCommentCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 39006133A5E1EC54DBD3487C /* _MiscMergeCommentCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CC72BA796611A5D196A09667 /* _MiscMergeIdentifyCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE628D17833100C9BC8C490 /* _MiscMergeIdentifyCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CF6FBEBBA2B1AAED7A383990 /* _MiscMergeProcedureCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = BFE46CC646F781A5D01BF931 /* _MiscMergeProcedureCommand.h */; };
+		D0734C4A3EDC65B1F18928BE /* MiscMergeCommandBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D844CA55C27C1AAEA1D7C516 /* MiscMergeCommandBlock.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D123E6056298402989705AF0 /* MiscMergeExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1556A320696AB1240313C3 /* MiscMergeExpression.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D1EA9D5B715CA7482471DA08 /* _MiscMergeDelayedParseCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 482D5E0166D658B926059448 /* _MiscMergeDelayedParseCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6203B8B3B28A2126C35D9F9 /* _MiscMergeOmitCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A15AB75AF7DA2C612F65E7 /* _MiscMergeOmitCommand.h */; };
+		D8440C437EC0354BA8955BDD /* _MiscMergeCopyCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE30313D56EE345D5DE9CF0 /* _MiscMergeCopyCommand.h */; };
+		DCDE763CE36535D3E3DA30B4 /* _MiscMergeEndforeachCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 72225CCF0629A1CAD50519F3 /* _MiscMergeEndforeachCommand.h */; };
+		E019A8336BFAE9B42A0D090B /* _MiscMergeNextCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C7BDAF9DE3A9E1B7F04A46D /* _MiscMergeNextCommand.h */; };
+		E0D8F8CAF25E77531910E484 /* _MiscMergeFieldCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 20D4810E3A1D725ED19A0E39 /* _MiscMergeFieldCommand.h */; };
+		E13033501822175759A947ED /* KeyValue+MiscMerge.h in Headers */ = {isa = PBXBuildFile; fileRef = 16398F20A60AB176E80ACF7D /* KeyValue+MiscMerge.h */; };
+		E20DB452FDC204EF10C302C5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 094904DD00291C120083C18C /* Cocoa.framework */; };
+		E3D1D6395F2F24D5870D4B93 /* _MiscMergeIndexCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = EF579248186F6BBA99B27B15 /* _MiscMergeIndexCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E9EA5DF74FFB822E4438AD4B /* _MiscMergeContinueCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DA2B48B7399E71FF41587C5 /* _MiscMergeContinueCommand.h */; };
+		EAE307ECF137D9F0B4E0A752 /* _MiscMergeEndloopCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C8649BFA64A43E647F093DF7 /* _MiscMergeEndloopCommand.h */; };
+		EE1FBE0D92849A8339E29FCA /* _MiscMergeOptionCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEBE53C5D7AC722C27607BD /* _MiscMergeOptionCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F1A4FB28F7FA7048AB8D5B7E /* _MiscMergeEndprocedureCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07F378D2814EECA0D067EC /* _MiscMergeEndprocedureCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F385760D3D843E8DCD783359 /* NSScanner+MiscMerge.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E9C3C0A87EAA4B839C53AC /* NSScanner+MiscMerge.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		267E137974D3A7470649FE74 /* PBXContainerItemProxy */ = {
+		3A92112C602E0295A546EB3B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D9D100A971C9AD6F8A88B690 /* Project object */;
+			containerPortal = 110DBD4BE150EC0BAE3C9BE7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E7A3CE7AE691D373677E19AF;
+			remoteGlobalIDString = AB2FBB98E70CF8C53096B757;
+			remoteInfo = "Pods-MiscMerge";
+		};
+		512DF71AD2554AFA497F5D70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 110DBD4BE150EC0BAE3C9BE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE17455C5EF69186252E55C8;
 			remoteInfo = "Pods-RegexKitLite";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04579012E3CB33A060FAAF86 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		426E3D8FABC04DD7646222AA /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4B0ECE9DFF042E18AF830452 /* Pods-RegexKitLite-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RegexKitLite-prefix.pch"; sourceTree = "<group>"; };
-		505EA9ADEDFB51BF7D11ED28 /* Pods-RegexKitLite.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RegexKitLite.xcconfig"; sourceTree = "<group>"; };
-		5150A15E53B22BB8D13E6418 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		65F534FD2269FEFA9120E8FF /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		908395346BEAD3E2748BDB9B /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DBAB74BE1AA01DE28CE5E93 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		A73A2171895EACCA5B054C2D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		AF0C7B51CC1393D38CD95411 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		B7CDE15809D90A77A2908F51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		B81A8D8F44644916383E7425 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		C11D3BA251C084AF3E459919 /* RegexKitLite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
-		DB407A2C1A9CD3D2A34178AD /* libPods-RegexKitLite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RegexKitLite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7870E7031AB3C5874686B3E /* RegexKitLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
-		F8330E4C66AB7A45CE1929E1 /* Pods-RegexKitLite-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RegexKitLite-Private.xcconfig"; sourceTree = "<group>"; };
-		FE9DDA02C2ED0E1B539EB3ED /* Pods-RegexKitLite-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RegexKitLite-dummy.m"; sourceTree = "<group>"; };
+		01A6DB1EF93A633FC67E9DA5 /* RegexKitLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		04A6206B94FF711EA0EFA9BC /* _MiscMergeElseCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeElseCommand.m; sourceTree = "<group>"; };
+		060B27229B7C492D5AAA7D32 /* _MiscMergeLoopCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeLoopCommand.m; sourceTree = "<group>"; };
+		076FEF41C94844D292C73959 /* _MiscMergeOptionCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeOptionCommand.h; sourceTree = "<group>"; };
+		094904DD00291C120083C18C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		0A8E7B34A8878BBC87A9EFA6 /* _MiscMergeEndprocedureCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeEndprocedureCommand.h; sourceTree = "<group>"; };
+		0B4E3CA7F334B6DBA1C1149B /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		0F7CDE2060E296E34F9C8173 /* _MiscMergeLoopCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeLoopCommand.h; sourceTree = "<group>"; };
+		14895981428186F20438A3DB /* _MiscMergeCallCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeCallCommand.h; sourceTree = "<group>"; };
+		16398F20A60AB176E80ACF7D /* KeyValue+MiscMerge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeyValue+MiscMerge.h"; sourceTree = "<group>"; };
+		1AA871C49DA324A5D8EB9200 /* NSString+MiscAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+MiscAdditions.h"; sourceTree = "<group>"; };
+		1CEBE53C5D7AC722C27607BD /* _MiscMergeOptionCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeOptionCommand.m; sourceTree = "<group>"; };
+		1EE628D17833100C9BC8C490 /* _MiscMergeIdentifyCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeIdentifyCommand.m; sourceTree = "<group>"; };
+		1FA3B88D0B29ECFC60DFD47B /* _MiscMergeForeachCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeForeachCommand.m; sourceTree = "<group>"; };
+		20D4810E3A1D725ED19A0E39 /* _MiscMergeFieldCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeFieldCommand.h; sourceTree = "<group>"; };
+		236EDB5B840FFB321BA8E908 /* libPods-MiscMerge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MiscMerge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C4A8E79E0537646CF871B7F /* _MiscMergeDebugCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeDebugCommand.m; sourceTree = "<group>"; };
+		2DC0C964CC0C146E2C1687BE /* NSNull.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NSNull.h; sourceTree = "<group>"; };
+		34B8355077E9443564558A08 /* _MiscMergeEndforeachCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeEndforeachCommand.m; sourceTree = "<group>"; };
+		3502FF0EE9D70CD322E6CF2E /* _MiscMergeEndwhileCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeEndwhileCommand.m; sourceTree = "<group>"; };
+		39006133A5E1EC54DBD3487C /* _MiscMergeCommentCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeCommentCommand.m; sourceTree = "<group>"; };
+		3C32AEDDB74041C495E152DE /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3E910D84B49F88FE4E2359CE /* _MiscMergeDelayedParseCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeDelayedParseCommand.h; sourceTree = "<group>"; };
+		4668F6537BFD6372BBBD08A8 /* Pods-MiscMerge-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MiscMerge-Private.xcconfig"; sourceTree = "<group>"; };
+		482D5E0166D658B926059448 /* _MiscMergeDelayedParseCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeDelayedParseCommand.m; sourceTree = "<group>"; };
+		4B71A927A840DA577617001F /* NSString+MiscAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+MiscAdditions.m"; sourceTree = "<group>"; };
+		52753B2D333EBF29FD1FD4C5 /* MiscMergeEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MiscMergeEngine.h; sourceTree = "<group>"; };
+		5B16EA75D5EC6B67A92B6FED /* MiscMergeDriver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MiscMergeDriver.h; sourceTree = "<group>"; };
+		5C7BDAF9DE3A9E1B7F04A46D /* _MiscMergeNextCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeNextCommand.h; sourceTree = "<group>"; };
+		5CA2802AFB47A6A0F1C8D282 /* _MiscMergeCommentCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeCommentCommand.h; sourceTree = "<group>"; };
+		5F84E0D51EBDC8732E431723 /* _MiscMergeIfCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeIfCommand.m; sourceTree = "<group>"; };
+		611B4325596922E6491ACC86 /* MiscMergeCommandBlock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MiscMergeCommandBlock.h; sourceTree = "<group>"; };
+		6C1556A320696AB1240313C3 /* MiscMergeExpression.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MiscMergeExpression.m; sourceTree = "<group>"; };
+		6DA8BE169DDDC27679960F48 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		6E07F378D2814EECA0D067EC /* _MiscMergeEndprocedureCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeEndprocedureCommand.m; sourceTree = "<group>"; };
+		72225CCF0629A1CAD50519F3 /* _MiscMergeEndforeachCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeEndforeachCommand.h; sourceTree = "<group>"; };
+		73B2E2A87B3687400F2EFBB5 /* MiscMergeCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MiscMergeCommand.h; sourceTree = "<group>"; };
+		758EB93C1BF3870B6B6507A1 /* _MiscMergeIfCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeIfCommand.h; sourceTree = "<group>"; };
+		7B844613345402AB52565C24 /* Pods-MiscMerge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MiscMerge-prefix.pch"; sourceTree = "<group>"; };
+		7DA2B48B7399E71FF41587C5 /* _MiscMergeContinueCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeContinueCommand.h; sourceTree = "<group>"; };
+		827CD9A31F9F3F4BED5FD3BF /* _MiscMergeForeachCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeForeachCommand.h; sourceTree = "<group>"; };
+		834FD6968558D0DA3BDD4590 /* MiscMergeCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MiscMergeCommand.m; sourceTree = "<group>"; };
+		862A24B5FF780AB3B6DA63AA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		88648E2B4DF934A7598D4ACE /* _MiscMergeNextCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeNextCommand.m; sourceTree = "<group>"; };
+		8901187BC271A3E772CA8AD2 /* _MiscMergeCopyCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeCopyCommand.m; sourceTree = "<group>"; };
+		8A335B34E9756EC2E3506913 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		8CE30313D56EE345D5DE9CF0 /* _MiscMergeCopyCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeCopyCommand.h; sourceTree = "<group>"; };
+		8CF0E68273DAE2C6F67A55D3 /* Pods-MiscMerge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MiscMerge-dummy.m"; sourceTree = "<group>"; };
+		8E3EF3A4D1F293AFFFC2E9CD /* _MiscMergeProcedureCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeProcedureCommand.m; sourceTree = "<group>"; };
+		9229EE8BF45C2D3C88306390 /* _MiscMergeOmitCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeOmitCommand.m; sourceTree = "<group>"; };
+		9E4C9570D9DBF06DBBAEFE81 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		A0A0D52A5DB1AE2B250E9ADB /* _MiscMergeDebugCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeDebugCommand.h; sourceTree = "<group>"; };
+		A0CA5A00B7B619186AE263A0 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		A35BFB7DFE272A0ECD037B5D /* _MiscMergeEndifCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeEndifCommand.h; sourceTree = "<group>"; };
+		A3822E443833D2A98983FB5D /* _MiscMergeSetCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeSetCommand.m; sourceTree = "<group>"; };
+		A388630D2BAC21DA302A7C5A /* MiscMergeFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MiscMergeFunctions.h; sourceTree = "<group>"; };
+		A7E9C3C0A87EAA4B839C53AC /* NSScanner+MiscMerge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSScanner+MiscMerge.h"; sourceTree = "<group>"; };
+		AEFDC491EDA241E4C7DCD554 /* _MiscMergeDateCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeDateCommand.m; sourceTree = "<group>"; };
+		AF064B5E19A81CB6B26A6AE6 /* _MiscMergeSetCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeSetCommand.h; sourceTree = "<group>"; };
+		B4D8ABB09E3A2A3E007A090D /* _MiscMergeIndexCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeIndexCommand.h; sourceTree = "<group>"; };
+		B5C0BBB8CF0995806625B349 /* _MiscMergeBreakCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeBreakCommand.m; sourceTree = "<group>"; };
+		B736E9F614BE2F0A64B27078 /* Pods-RegexKitLite.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RegexKitLite.xcconfig"; sourceTree = "<group>"; };
+		BFA767DED917DC84C1A2BB14 /* MiscMergeExpression.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MiscMergeExpression.h; sourceTree = "<group>"; };
+		BFE46CC646F781A5D01BF931 /* _MiscMergeProcedureCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeProcedureCommand.h; sourceTree = "<group>"; };
+		C0453D9A0987EB62090F5A3A /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C4B21044286598D05E2C0FEB /* _MiscMergeFieldCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeFieldCommand.m; sourceTree = "<group>"; };
+		C8649BFA64A43E647F093DF7 /* _MiscMergeEndloopCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeEndloopCommand.h; sourceTree = "<group>"; };
+		CA7866EFB2DD1382722AD1E2 /* _MiscMergeElseCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeElseCommand.h; sourceTree = "<group>"; };
+		CC74833F6E1B7EFBAB3E5A72 /* _MiscMergeContinueCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeContinueCommand.m; sourceTree = "<group>"; };
+		CD044C2D2DCF444C642BC9CD /* MiscMergeEngine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MiscMergeEngine.m; sourceTree = "<group>"; };
+		CE58EEBEBAB04B90184A1F59 /* _MiscMergeIncludeCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeIncludeCommand.m; sourceTree = "<group>"; };
+		CE8122ED2BB285F036CD6F78 /* NSScanner+MiscMerge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSScanner+MiscMerge.m"; sourceTree = "<group>"; };
+		D53214ECF5DD4B7246B54155 /* KeyValue+MiscMerge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeyValue+MiscMerge.m"; sourceTree = "<group>"; };
+		D64A1E486A7E39DE78343343 /* libPods-RegexKitLite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RegexKitLite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D844CA55C27C1AAEA1D7C516 /* MiscMergeCommandBlock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MiscMergeCommandBlock.m; sourceTree = "<group>"; };
+		D91AE4F60DA793E7ECABBF49 /* _MiscMergeEndwhileCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeEndwhileCommand.h; sourceTree = "<group>"; };
+		DAFE0E52938914891D1E3F30 /* _MiscMergeIncludeCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeIncludeCommand.h; sourceTree = "<group>"; };
+		DB16A8016A47BB02C74D95AA /* _MiscMergeElseifCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeElseifCommand.m; sourceTree = "<group>"; };
+		DB2C004BA33081AE6B5570F0 /* _MiscMergeWhileCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeWhileCommand.h; sourceTree = "<group>"; };
+		DC9F4BE7A36DD5F3057C838B /* MiscMergeFunctions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MiscMergeFunctions.m; sourceTree = "<group>"; };
+		E1AA79E0055A9A53D8E57303 /* MiscMergeTemplate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MiscMergeTemplate.h; sourceTree = "<group>"; };
+		E4A15AB75AF7DA2C612F65E7 /* _MiscMergeOmitCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeOmitCommand.h; sourceTree = "<group>"; };
+		E535CC207759D01230D58F13 /* Pods-RegexKitLite-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RegexKitLite-Private.xcconfig"; sourceTree = "<group>"; };
+		E57BED2A25DDBA0EB937191E /* _MiscMergeWhileCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeWhileCommand.m; sourceTree = "<group>"; };
+		E5D9A967069049E7B1B0AD9D /* _MiscMergeEndloopCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeEndloopCommand.m; sourceTree = "<group>"; };
+		E5ED04104EBDA3B5265284C8 /* Pods-RegexKitLite-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RegexKitLite-dummy.m"; sourceTree = "<group>"; };
+		E77FC1CECF02FAA3A3D931F5 /* _MiscMergeDateCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeDateCommand.h; sourceTree = "<group>"; };
+		E834F4585EB069298499A6AE /* _MiscMergeIdentifyCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeIdentifyCommand.h; sourceTree = "<group>"; };
+		E848F6DC58DF4287D6350DA9 /* _MiscMergeBreakCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeBreakCommand.h; sourceTree = "<group>"; };
+		EA08E82CFEAAF76FA6E7EC86 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		EB2824112FC273CD021E7799 /* _MiscMergeCallCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeCallCommand.m; sourceTree = "<group>"; };
+		EEFD0048CC45F88BE3A9E1E2 /* _MiscMergeElseifCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = _MiscMergeElseifCommand.h; sourceTree = "<group>"; };
+		EF579248186F6BBA99B27B15 /* _MiscMergeIndexCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeIndexCommand.m; sourceTree = "<group>"; };
+		F4E93988AB43B4E3279A514E /* _MiscMergeEndifCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = _MiscMergeEndifCommand.m; sourceTree = "<group>"; };
+		F7CAD1AD88CC1474DC3E4560 /* MiscMergeTemplate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MiscMergeTemplate.m; sourceTree = "<group>"; };
+		FAB1916EB4D8585A9188A21A /* NSNull.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NSNull.m; sourceTree = "<group>"; };
+		FCD6F8492338FC5A8B6AB4F5 /* MiscMergeDriver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MiscMergeDriver.m; sourceTree = "<group>"; };
+		FE67BF7D2BF2705F4951B198 /* Pods-MiscMerge.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MiscMerge.xcconfig"; sourceTree = "<group>"; };
+		FF7B7C0B417B5448B4B1F0E0 /* RegexKitLite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		FFFDE0D5C92DF67D37C23093 /* Pods-RegexKitLite-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RegexKitLite-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3755F06681421C22088F7762 /* Frameworks */ = {
+		67F13CADD27EB69FF39C3297 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2126B74941001D0DBC1DEDC /* Cocoa.framework in Frameworks */,
+				E20DB452FDC204EF10C302C5 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		62A7027298F6B0BA9963A0E4 /* Frameworks */ = {
+		6F2CCD6E07F4C4C6129A4E61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B53E175C9B40B157C7FF0C69 /* Cocoa.framework in Frameworks */,
+				6F5BD7744E0FB096488923D2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA8556244E881D3F4346F76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73E8A1D271F48698DB39A303 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		068D379FF8E9659E27C5AD58 /* Pods */ = {
+		00E4DFB81E44FDBEB102DC24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2F714175ED0F138A4DBF6857 /* RegexKitLite */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		2F714175ED0F138A4DBF6857 /* RegexKitLite */ = {
-			isa = PBXGroup;
-			children = (
-				E7870E7031AB3C5874686B3E /* RegexKitLite.h */,
-				C11D3BA251C084AF3E459919 /* RegexKitLite.m */,
-				A9561636C894DC439911C2D0 /* Support Files */,
-			);
-			path = RegexKitLite;
-			sourceTree = "<group>";
-		};
-		37A5D7FFE7995A90F74218F3 = {
-			isa = PBXGroup;
-			children = (
-				908395346BEAD3E2748BDB9B /* Podfile */,
-				CA058675DE077FBD51EDB550 /* Frameworks */,
-				068D379FF8E9659E27C5AD58 /* Pods */,
-				3F4CDE5348B3E25F28C19382 /* Products */,
-				9374A4EBC0DA243F914CFC0B /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		3F4CDE5348B3E25F28C19382 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5150A15E53B22BB8D13E6418 /* libPods.a */,
-				DB407A2C1A9CD3D2A34178AD /* libPods-RegexKitLite.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9374A4EBC0DA243F914CFC0B /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F5A08CD0B193E950DC447ADA /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		A02F1C0A882B6EA228D0B96A /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				A73A2171895EACCA5B054C2D /* Cocoa.framework */,
-			);
-			name = "OS X";
-			sourceTree = "<group>";
-		};
-		A9561636C894DC439911C2D0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				505EA9ADEDFB51BF7D11ED28 /* Pods-RegexKitLite.xcconfig */,
-				F8330E4C66AB7A45CE1929E1 /* Pods-RegexKitLite-Private.xcconfig */,
-				FE9DDA02C2ED0E1B539EB3ED /* Pods-RegexKitLite-dummy.m */,
-				4B0ECE9DFF042E18AF830452 /* Pods-RegexKitLite-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-RegexKitLite";
-			sourceTree = "<group>";
-		};
-		CA058675DE077FBD51EDB550 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A02F1C0A882B6EA228D0B96A /* OS X */,
+				1461B93E835F83737EC2738A /* OS X */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F5A08CD0B193E950DC447ADA /* Pods */ = {
+		1461B93E835F83737EC2738A /* OS X */ = {
 			isa = PBXGroup;
 			children = (
-				426E3D8FABC04DD7646222AA /* Pods-acknowledgements.markdown */,
-				65F534FD2269FEFA9120E8FF /* Pods-acknowledgements.plist */,
-				B81A8D8F44644916383E7425 /* Pods-dummy.m */,
-				04579012E3CB33A060FAAF86 /* Pods-environment.h */,
-				9DBAB74BE1AA01DE28CE5E93 /* Pods-resources.sh */,
-				AF0C7B51CC1393D38CD95411 /* Pods.debug.xcconfig */,
-				B7CDE15809D90A77A2908F51 /* Pods.release.xcconfig */,
+				094904DD00291C120083C18C /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		63994458089207AABE3D234A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE67BF7D2BF2705F4951B198 /* Pods-MiscMerge.xcconfig */,
+				4668F6537BFD6372BBBD08A8 /* Pods-MiscMerge-Private.xcconfig */,
+				8CF0E68273DAE2C6F67A55D3 /* Pods-MiscMerge-dummy.m */,
+				7B844613345402AB52565C24 /* Pods-MiscMerge-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MiscMerge";
+			sourceTree = "<group>";
+		};
+		7D87F4FC08ABFC25E285A01B /* MiscMerge */ = {
+			isa = PBXGroup;
+			children = (
+				16398F20A60AB176E80ACF7D /* KeyValue+MiscMerge.h */,
+				D53214ECF5DD4B7246B54155 /* KeyValue+MiscMerge.m */,
+				73B2E2A87B3687400F2EFBB5 /* MiscMergeCommand.h */,
+				834FD6968558D0DA3BDD4590 /* MiscMergeCommand.m */,
+				611B4325596922E6491ACC86 /* MiscMergeCommandBlock.h */,
+				D844CA55C27C1AAEA1D7C516 /* MiscMergeCommandBlock.m */,
+				5B16EA75D5EC6B67A92B6FED /* MiscMergeDriver.h */,
+				FCD6F8492338FC5A8B6AB4F5 /* MiscMergeDriver.m */,
+				52753B2D333EBF29FD1FD4C5 /* MiscMergeEngine.h */,
+				CD044C2D2DCF444C642BC9CD /* MiscMergeEngine.m */,
+				BFA767DED917DC84C1A2BB14 /* MiscMergeExpression.h */,
+				6C1556A320696AB1240313C3 /* MiscMergeExpression.m */,
+				A388630D2BAC21DA302A7C5A /* MiscMergeFunctions.h */,
+				DC9F4BE7A36DD5F3057C838B /* MiscMergeFunctions.m */,
+				E1AA79E0055A9A53D8E57303 /* MiscMergeTemplate.h */,
+				F7CAD1AD88CC1474DC3E4560 /* MiscMergeTemplate.m */,
+				2DC0C964CC0C146E2C1687BE /* NSNull.h */,
+				FAB1916EB4D8585A9188A21A /* NSNull.m */,
+				A7E9C3C0A87EAA4B839C53AC /* NSScanner+MiscMerge.h */,
+				CE8122ED2BB285F036CD6F78 /* NSScanner+MiscMerge.m */,
+				1AA871C49DA324A5D8EB9200 /* NSString+MiscAdditions.h */,
+				4B71A927A840DA577617001F /* NSString+MiscAdditions.m */,
+				E848F6DC58DF4287D6350DA9 /* _MiscMergeBreakCommand.h */,
+				B5C0BBB8CF0995806625B349 /* _MiscMergeBreakCommand.m */,
+				14895981428186F20438A3DB /* _MiscMergeCallCommand.h */,
+				EB2824112FC273CD021E7799 /* _MiscMergeCallCommand.m */,
+				5CA2802AFB47A6A0F1C8D282 /* _MiscMergeCommentCommand.h */,
+				39006133A5E1EC54DBD3487C /* _MiscMergeCommentCommand.m */,
+				7DA2B48B7399E71FF41587C5 /* _MiscMergeContinueCommand.h */,
+				CC74833F6E1B7EFBAB3E5A72 /* _MiscMergeContinueCommand.m */,
+				8CE30313D56EE345D5DE9CF0 /* _MiscMergeCopyCommand.h */,
+				8901187BC271A3E772CA8AD2 /* _MiscMergeCopyCommand.m */,
+				E77FC1CECF02FAA3A3D931F5 /* _MiscMergeDateCommand.h */,
+				AEFDC491EDA241E4C7DCD554 /* _MiscMergeDateCommand.m */,
+				A0A0D52A5DB1AE2B250E9ADB /* _MiscMergeDebugCommand.h */,
+				2C4A8E79E0537646CF871B7F /* _MiscMergeDebugCommand.m */,
+				3E910D84B49F88FE4E2359CE /* _MiscMergeDelayedParseCommand.h */,
+				482D5E0166D658B926059448 /* _MiscMergeDelayedParseCommand.m */,
+				CA7866EFB2DD1382722AD1E2 /* _MiscMergeElseCommand.h */,
+				04A6206B94FF711EA0EFA9BC /* _MiscMergeElseCommand.m */,
+				EEFD0048CC45F88BE3A9E1E2 /* _MiscMergeElseifCommand.h */,
+				DB16A8016A47BB02C74D95AA /* _MiscMergeElseifCommand.m */,
+				72225CCF0629A1CAD50519F3 /* _MiscMergeEndforeachCommand.h */,
+				34B8355077E9443564558A08 /* _MiscMergeEndforeachCommand.m */,
+				A35BFB7DFE272A0ECD037B5D /* _MiscMergeEndifCommand.h */,
+				F4E93988AB43B4E3279A514E /* _MiscMergeEndifCommand.m */,
+				C8649BFA64A43E647F093DF7 /* _MiscMergeEndloopCommand.h */,
+				E5D9A967069049E7B1B0AD9D /* _MiscMergeEndloopCommand.m */,
+				0A8E7B34A8878BBC87A9EFA6 /* _MiscMergeEndprocedureCommand.h */,
+				6E07F378D2814EECA0D067EC /* _MiscMergeEndprocedureCommand.m */,
+				D91AE4F60DA793E7ECABBF49 /* _MiscMergeEndwhileCommand.h */,
+				3502FF0EE9D70CD322E6CF2E /* _MiscMergeEndwhileCommand.m */,
+				20D4810E3A1D725ED19A0E39 /* _MiscMergeFieldCommand.h */,
+				C4B21044286598D05E2C0FEB /* _MiscMergeFieldCommand.m */,
+				827CD9A31F9F3F4BED5FD3BF /* _MiscMergeForeachCommand.h */,
+				1FA3B88D0B29ECFC60DFD47B /* _MiscMergeForeachCommand.m */,
+				E834F4585EB069298499A6AE /* _MiscMergeIdentifyCommand.h */,
+				1EE628D17833100C9BC8C490 /* _MiscMergeIdentifyCommand.m */,
+				758EB93C1BF3870B6B6507A1 /* _MiscMergeIfCommand.h */,
+				5F84E0D51EBDC8732E431723 /* _MiscMergeIfCommand.m */,
+				DAFE0E52938914891D1E3F30 /* _MiscMergeIncludeCommand.h */,
+				CE58EEBEBAB04B90184A1F59 /* _MiscMergeIncludeCommand.m */,
+				B4D8ABB09E3A2A3E007A090D /* _MiscMergeIndexCommand.h */,
+				EF579248186F6BBA99B27B15 /* _MiscMergeIndexCommand.m */,
+				0F7CDE2060E296E34F9C8173 /* _MiscMergeLoopCommand.h */,
+				060B27229B7C492D5AAA7D32 /* _MiscMergeLoopCommand.m */,
+				5C7BDAF9DE3A9E1B7F04A46D /* _MiscMergeNextCommand.h */,
+				88648E2B4DF934A7598D4ACE /* _MiscMergeNextCommand.m */,
+				E4A15AB75AF7DA2C612F65E7 /* _MiscMergeOmitCommand.h */,
+				9229EE8BF45C2D3C88306390 /* _MiscMergeOmitCommand.m */,
+				076FEF41C94844D292C73959 /* _MiscMergeOptionCommand.h */,
+				1CEBE53C5D7AC722C27607BD /* _MiscMergeOptionCommand.m */,
+				BFE46CC646F781A5D01BF931 /* _MiscMergeProcedureCommand.h */,
+				8E3EF3A4D1F293AFFFC2E9CD /* _MiscMergeProcedureCommand.m */,
+				AF064B5E19A81CB6B26A6AE6 /* _MiscMergeSetCommand.h */,
+				A3822E443833D2A98983FB5D /* _MiscMergeSetCommand.m */,
+				DB2C004BA33081AE6B5570F0 /* _MiscMergeWhileCommand.h */,
+				E57BED2A25DDBA0EB937191E /* _MiscMergeWhileCommand.m */,
+				63994458089207AABE3D234A /* Support Files */,
+			);
+			path = MiscMerge;
+			sourceTree = "<group>";
+		};
+		8BA6E525136825F33226F8AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D87F4FC08ABFC25E285A01B /* MiscMerge */,
+				D2DF0E76A85A499894F9F2C1 /* RegexKitLite */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A16006B2778BC54B025D055A = {
+			isa = PBXGroup;
+			children = (
+				C0453D9A0987EB62090F5A3A /* Podfile */,
+				00E4DFB81E44FDBEB102DC24 /* Frameworks */,
+				8BA6E525136825F33226F8AD /* Pods */,
+				F8AC585AE36391A475D132AC /* Products */,
+				EC3FA5236E5CC9B87BCDCE9D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D2DF0E76A85A499894F9F2C1 /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				01A6DB1EF93A633FC67E9DA5 /* RegexKitLite.h */,
+				FF7B7C0B417B5448B4B1F0E0 /* RegexKitLite.m */,
+				F1CEF0C6CD40018FBC8E32DB /* Support Files */,
+			);
+			path = RegexKitLite;
+			sourceTree = "<group>";
+		};
+		EAA73195A901CBD0FF499750 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C32AEDDB74041C495E152DE /* Pods-acknowledgements.markdown */,
+				8A335B34E9756EC2E3506913 /* Pods-acknowledgements.plist */,
+				A0CA5A00B7B619186AE263A0 /* Pods-dummy.m */,
+				0B4E3CA7F334B6DBA1C1149B /* Pods-environment.h */,
+				9E4C9570D9DBF06DBBAEFE81 /* Pods-resources.sh */,
+				6DA8BE169DDDC27679960F48 /* Pods.debug.xcconfig */,
+				EA08E82CFEAAF76FA6E7EC86 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
+		EC3FA5236E5CC9B87BCDCE9D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAA73195A901CBD0FF499750 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F1CEF0C6CD40018FBC8E32DB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B736E9F614BE2F0A64B27078 /* Pods-RegexKitLite.xcconfig */,
+				E535CC207759D01230D58F13 /* Pods-RegexKitLite-Private.xcconfig */,
+				E5ED04104EBDA3B5265284C8 /* Pods-RegexKitLite-dummy.m */,
+				FFFDE0D5C92DF67D37C23093 /* Pods-RegexKitLite-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-RegexKitLite";
+			sourceTree = "<group>";
+		};
+		F8AC585AE36391A475D132AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				862A24B5FF780AB3B6DA63AA /* libPods.a */,
+				236EDB5B840FFB321BA8E908 /* libPods-MiscMerge.a */,
+				D64A1E486A7E39DE78343343 /* libPods-RegexKitLite.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5CBA48614DCF1B4ED17387E6 /* Headers */ = {
+		7D02EBEE9C637C63DC491C65 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85E3F4A268888CCE14945D36 /* RegexKitLite.h in Headers */,
+				648D3838B5B75B14014397FA /* RegexKitLite.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D54478CBED2BF89DF531000 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E13033501822175759A947ED /* KeyValue+MiscMerge.h in Headers */,
+				09F90604DFD8CE6B48FDC6DA /* MiscMergeCommand.h in Headers */,
+				BD373739E6E992F2346BE0AC /* MiscMergeCommandBlock.h in Headers */,
+				08261B6C509478EDD2254C64 /* MiscMergeDriver.h in Headers */,
+				52C15AD672A15C6F1220EC22 /* MiscMergeEngine.h in Headers */,
+				3BE35CD4EEF7F2F1EA36F957 /* MiscMergeExpression.h in Headers */,
+				847999196E24121CBB8EE713 /* MiscMergeFunctions.h in Headers */,
+				AD63D924CF6B3F7412271632 /* MiscMergeTemplate.h in Headers */,
+				67845061FC8E69F04BDAF482 /* NSNull.h in Headers */,
+				F385760D3D843E8DCD783359 /* NSScanner+MiscMerge.h in Headers */,
+				5CB4B547F80D1F629141FA3A /* NSString+MiscAdditions.h in Headers */,
+				619E081BAC9F585286A3951A /* _MiscMergeBreakCommand.h in Headers */,
+				1ED691AEE8553B8E22DF571E /* _MiscMergeCallCommand.h in Headers */,
+				09EC358A1586CD397706F0C4 /* _MiscMergeCommentCommand.h in Headers */,
+				E9EA5DF74FFB822E4438AD4B /* _MiscMergeContinueCommand.h in Headers */,
+				D8440C437EC0354BA8955BDD /* _MiscMergeCopyCommand.h in Headers */,
+				0298BD71496C7E6C9E43FDDA /* _MiscMergeDateCommand.h in Headers */,
+				4CCA23321C2442ABE0BE93F1 /* _MiscMergeDebugCommand.h in Headers */,
+				0A4FC9434BEA941E13D1D2D1 /* _MiscMergeDelayedParseCommand.h in Headers */,
+				A27515F0C3DECA39D49F95C0 /* _MiscMergeElseCommand.h in Headers */,
+				9AE3FEAAAB6D53C88DF1BF4B /* _MiscMergeElseifCommand.h in Headers */,
+				DCDE763CE36535D3E3DA30B4 /* _MiscMergeEndforeachCommand.h in Headers */,
+				58CE853970863F4DB9830913 /* _MiscMergeEndifCommand.h in Headers */,
+				EAE307ECF137D9F0B4E0A752 /* _MiscMergeEndloopCommand.h in Headers */,
+				6FA7D891A05CD3CE2A18B842 /* _MiscMergeEndprocedureCommand.h in Headers */,
+				83688EFA8075D71ADC8FE166 /* _MiscMergeEndwhileCommand.h in Headers */,
+				E0D8F8CAF25E77531910E484 /* _MiscMergeFieldCommand.h in Headers */,
+				5A79969CD50518DC1490BC7F /* _MiscMergeForeachCommand.h in Headers */,
+				B419AA9F9AE540DF181206A7 /* _MiscMergeIdentifyCommand.h in Headers */,
+				7B834799451EBBC0B29DCBB6 /* _MiscMergeIfCommand.h in Headers */,
+				7D7B887EFBD4C584E27C8D17 /* _MiscMergeIncludeCommand.h in Headers */,
+				0762DD00E116337E160CF51F /* _MiscMergeIndexCommand.h in Headers */,
+				330FCD573FFBE07171262387 /* _MiscMergeLoopCommand.h in Headers */,
+				E019A8336BFAE9B42A0D090B /* _MiscMergeNextCommand.h in Headers */,
+				D6203B8B3B28A2126C35D9F9 /* _MiscMergeOmitCommand.h in Headers */,
+				5313F7105E101D2C941488A6 /* _MiscMergeOptionCommand.h in Headers */,
+				CF6FBEBBA2B1AAED7A383990 /* _MiscMergeProcedureCommand.h in Headers */,
+				9F0B86CCABA39A3E5A2808CE /* _MiscMergeSetCommand.h in Headers */,
+				7E1998E7133305CC592258DA /* _MiscMergeWhileCommand.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		80E72869DADDF88F9F112FC1 /* Pods */ = {
+		4F2BEABEDC264C7336051E18 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8477C35B5F76D458F90B8B9 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 7C2FA8A091AA3FF4543E1BA7 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				9F3792EF00B4FF0FEF3D43DB /* Sources */,
-				62A7027298F6B0BA9963A0E4 /* Frameworks */,
+				9B08EFFC179680E03B6C48FA /* Sources */,
+				67F13CADD27EB69FF39C3297 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7DF12AAA3A69774FF6E94D00 /* PBXTargetDependency */,
+				A53ADF81053C4AE2B049BA76 /* PBXTargetDependency */,
+				8AD5C63D2BF1687973EFAEED /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = 5150A15E53B22BB8D13E6418 /* libPods.a */;
+			productReference = 862A24B5FF780AB3B6DA63AA /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		E7A3CE7AE691D373677E19AF /* Pods-RegexKitLite */ = {
+		AB2FBB98E70CF8C53096B757 /* Pods-MiscMerge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A514CC9E6F11A42B7C7151E1 /* Build configuration list for PBXNativeTarget "Pods-RegexKitLite" */;
+			buildConfigurationList = 69D1A71817AED083B8EB2188 /* Build configuration list for PBXNativeTarget "Pods-MiscMerge" */;
 			buildPhases = (
-				296897B91C2508191394AEC4 /* Sources */,
-				3755F06681421C22088F7762 /* Frameworks */,
-				5CBA48614DCF1B4ED17387E6 /* Headers */,
+				BC13CD261B138EB5415E0053 /* Sources */,
+				CCA8556244E881D3F4346F76 /* Frameworks */,
+				9D54478CBED2BF89DF531000 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MiscMerge";
+			productName = "Pods-MiscMerge";
+			productReference = 236EDB5B840FFB321BA8E908 /* libPods-MiscMerge.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BE17455C5EF69186252E55C8 /* Pods-RegexKitLite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6838F250A7378861DDD1E986 /* Build configuration list for PBXNativeTarget "Pods-RegexKitLite" */;
+			buildPhases = (
+				77D3FEBA7676773D9C1FA168 /* Sources */,
+				6F2CCD6E07F4C4C6129A4E61 /* Frameworks */,
+				7D02EBEE9C637C63DC491C65 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -199,68 +541,122 @@
 			);
 			name = "Pods-RegexKitLite";
 			productName = "Pods-RegexKitLite";
-			productReference = DB407A2C1A9CD3D2A34178AD /* libPods-RegexKitLite.a */;
+			productReference = D64A1E486A7E39DE78343343 /* libPods-RegexKitLite.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D9D100A971C9AD6F8A88B690 /* Project object */ = {
+		110DBD4BE150EC0BAE3C9BE7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 49394AF7078494E77FBEC280 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 16A88C4618375187C0726A06 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 37A5D7FFE7995A90F74218F3;
-			productRefGroup = 3F4CDE5348B3E25F28C19382 /* Products */;
+			mainGroup = A16006B2778BC54B025D055A;
+			productRefGroup = F8AC585AE36391A475D132AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				80E72869DADDF88F9F112FC1 /* Pods */,
-				E7A3CE7AE691D373677E19AF /* Pods-RegexKitLite */,
+				4F2BEABEDC264C7336051E18 /* Pods */,
+				AB2FBB98E70CF8C53096B757 /* Pods-MiscMerge */,
+				BE17455C5EF69186252E55C8 /* Pods-RegexKitLite */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		296897B91C2508191394AEC4 /* Sources */ = {
+		77D3FEBA7676773D9C1FA168 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08B443B4F05D2C9583B0F0F7 /* Pods-RegexKitLite-dummy.m in Sources */,
-				3E2E7BCA8B0F8DCA3A5F8657 /* RegexKitLite.m in Sources */,
+				8A26289758367C0A90CDE197 /* Pods-RegexKitLite-dummy.m in Sources */,
+				9D4F93AC9E32843D99EE58D9 /* RegexKitLite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F3792EF00B4FF0FEF3D43DB /* Sources */ = {
+		9B08EFFC179680E03B6C48FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				700342155627D71FF955411D /* Pods-dummy.m in Sources */,
+				CB183AEBE0F5DA2C7C6C9879 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC13CD261B138EB5415E0053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2682141AACB625FD8E3D05A7 /* KeyValue+MiscMerge.m in Sources */,
+				0E307A4E996FAA71880532C5 /* MiscMergeCommand.m in Sources */,
+				D0734C4A3EDC65B1F18928BE /* MiscMergeCommandBlock.m in Sources */,
+				40523BBEEEF9189F860A8A52 /* MiscMergeDriver.m in Sources */,
+				2E73F5AA2B7E27AEBDAD60A3 /* MiscMergeEngine.m in Sources */,
+				D123E6056298402989705AF0 /* MiscMergeExpression.m in Sources */,
+				2B2429134E78B0B0E177ECB1 /* MiscMergeFunctions.m in Sources */,
+				5EDD9054D171FF241BDC418F /* MiscMergeTemplate.m in Sources */,
+				A25B77B32824D63DD9C2E6F3 /* NSNull.m in Sources */,
+				7036027CE75297050364CBCA /* NSScanner+MiscMerge.m in Sources */,
+				C81325B5FA8046BEE24D9376 /* NSString+MiscAdditions.m in Sources */,
+				C3F07E742A48CA138F95A3CF /* Pods-MiscMerge-dummy.m in Sources */,
+				6BBAD28E336519B0D909428D /* _MiscMergeBreakCommand.m in Sources */,
+				4024FFE7BB9AE766C9272CEF /* _MiscMergeCallCommand.m in Sources */,
+				CC340B0C2ED0F7B3DCB45A64 /* _MiscMergeCommentCommand.m in Sources */,
+				2A22141B558C9128D6F4CF38 /* _MiscMergeContinueCommand.m in Sources */,
+				CAE70A629BA43C7024B5E7FF /* _MiscMergeCopyCommand.m in Sources */,
+				9B0F8E1F212E952E522801D3 /* _MiscMergeDateCommand.m in Sources */,
+				C05C882135BA984C97803314 /* _MiscMergeDebugCommand.m in Sources */,
+				D1EA9D5B715CA7482471DA08 /* _MiscMergeDelayedParseCommand.m in Sources */,
+				C17BD623F4D9E1F3F03AED94 /* _MiscMergeElseCommand.m in Sources */,
+				A2AC573B6DC7DF0667832777 /* _MiscMergeElseifCommand.m in Sources */,
+				9942CF8E4C9876EA3F9F81B9 /* _MiscMergeEndforeachCommand.m in Sources */,
+				5B3FB5EC349C565478315062 /* _MiscMergeEndifCommand.m in Sources */,
+				666E9C528C245FF9D49C8CBF /* _MiscMergeEndloopCommand.m in Sources */,
+				F1A4FB28F7FA7048AB8D5B7E /* _MiscMergeEndprocedureCommand.m in Sources */,
+				223DE283B1155BA70F076210 /* _MiscMergeEndwhileCommand.m in Sources */,
+				39A03F28C7E819DE8F3E9935 /* _MiscMergeFieldCommand.m in Sources */,
+				4A81977E51DACEA23ABE51E4 /* _MiscMergeForeachCommand.m in Sources */,
+				CC72BA796611A5D196A09667 /* _MiscMergeIdentifyCommand.m in Sources */,
+				4F04F7CB88C3F851D73690E0 /* _MiscMergeIfCommand.m in Sources */,
+				4EE736BAAD0BF23A69B6649E /* _MiscMergeIncludeCommand.m in Sources */,
+				E3D1D6395F2F24D5870D4B93 /* _MiscMergeIndexCommand.m in Sources */,
+				0001DD5F538A7701BBF77399 /* _MiscMergeLoopCommand.m in Sources */,
+				BAD1CC5EF5DC66245CBA0772 /* _MiscMergeNextCommand.m in Sources */,
+				BFBAE50BCC2DE1ABBB58278D /* _MiscMergeOmitCommand.m in Sources */,
+				EE1FBE0D92849A8339E29FCA /* _MiscMergeOptionCommand.m in Sources */,
+				3C01866F3966A04BC2E667CE /* _MiscMergeProcedureCommand.m in Sources */,
+				6C6586720B6C1941842E8A3C /* _MiscMergeSetCommand.m in Sources */,
+				820BB495A3A225F08BE60FD4 /* _MiscMergeWhileCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7DF12AAA3A69774FF6E94D00 /* PBXTargetDependency */ = {
+		8AD5C63D2BF1687973EFAEED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-RegexKitLite";
-			target = E7A3CE7AE691D373677E19AF /* Pods-RegexKitLite */;
-			targetProxy = 267E137974D3A7470649FE74 /* PBXContainerItemProxy */;
+			target = BE17455C5EF69186252E55C8 /* Pods-RegexKitLite */;
+			targetProxy = 512DF71AD2554AFA497F5D70 /* PBXContainerItemProxy */;
+		};
+		A53ADF81053C4AE2B049BA76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MiscMerge";
+			target = AB2FBB98E70CF8C53096B757 /* Pods-MiscMerge */;
+			targetProxy = 3A92112C602E0295A546EB3B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0452735D721F860587FB1ABF /* Release */ = {
+		2BEF47B3FDB23564A37A6EEC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7CDE15809D90A77A2908F51 /* Pods.release.xcconfig */;
+			baseConfigurationReference = EA08E82CFEAAF76FA6E7EC86 /* Pods.release.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -276,7 +672,56 @@
 			};
 			name = Release;
 		};
-		2AD9573B8C00E1F4831295DC /* Debug */ = {
+		5054A63AA6988E838E98830A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DA8BE169DDDC27679960F48 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		69F517DBC9A27983695857F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E535CC207759D01230D58F13 /* Pods-RegexKitLite-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-RegexKitLite/Pods-RegexKitLite-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9C4BD106A0F1D63D83EAAF49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4668F6537BFD6372BBBD08A8 /* Pods-MiscMerge-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MiscMerge/Pods-MiscMerge-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A480E5319E9A5FF4FA047AB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -315,7 +760,41 @@
 			};
 			name = Debug;
 		};
-		A27ED6DF0293F18932EC37B4 /* Release */ = {
+		DA166766E3F5248AD000EC49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4668F6537BFD6372BBBD08A8 /* Pods-MiscMerge-Private.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MiscMerge/Pods-MiscMerge-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EC1609DADF88B79FA8DBE976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E535CC207759D01230D58F13 /* Pods-RegexKitLite-Private.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-RegexKitLite/Pods-RegexKitLite-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F30B93B8B8E10E0039E6270D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -349,87 +828,46 @@
 			};
 			name = Release;
 		};
-		AE62E5388D95127BA8F3A7C5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF0C7B51CC1393D38CD95411 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		BB8CA3598D43EC2B093A077B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8330E4C66AB7A45CE1929E1 /* Pods-RegexKitLite-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-RegexKitLite/Pods-RegexKitLite-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		DE5E110AD1179C1BD8B34E17 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8330E4C66AB7A45CE1929E1 /* Pods-RegexKitLite-Private.xcconfig */;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-RegexKitLite/Pods-RegexKitLite-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		49394AF7078494E77FBEC280 /* Build configuration list for PBXProject "Pods" */ = {
+		16A88C4618375187C0726A06 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2AD9573B8C00E1F4831295DC /* Debug */,
-				A27ED6DF0293F18932EC37B4 /* Release */,
+				A480E5319E9A5FF4FA047AB3 /* Debug */,
+				F30B93B8B8E10E0039E6270D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A514CC9E6F11A42B7C7151E1 /* Build configuration list for PBXNativeTarget "Pods-RegexKitLite" */ = {
+		6838F250A7378861DDD1E986 /* Build configuration list for PBXNativeTarget "Pods-RegexKitLite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB8CA3598D43EC2B093A077B /* Debug */,
-				DE5E110AD1179C1BD8B34E17 /* Release */,
+				69F517DBC9A27983695857F5 /* Debug */,
+				EC1609DADF88B79FA8DBE976 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8477C35B5F76D458F90B8B9 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		69D1A71817AED083B8EB2188 /* Build configuration list for PBXNativeTarget "Pods-MiscMerge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE62E5388D95127BA8F3A7C5 /* Debug */,
-				0452735D721F860587FB1ABF /* Release */,
+				9C4BD106A0F1D63D83EAAF49 /* Debug */,
+				DA166766E3F5248AD000EC49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C2FA8A091AA3FF4543E1BA7 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5054A63AA6988E838E98830A /* Debug */,
+				2BEF47B3FDB23564A37A6EEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D9D100A971C9AD6F8A88B690 /* Project object */;
+	rootObject = 110DBD4BE150EC0BAE3C9BE7 /* Project object */;
 }
