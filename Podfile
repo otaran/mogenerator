@@ -1,6 +1,6 @@
 source 'https://github.com/cocoapods/specs.git'
 
-platform :osx
+platform :osx, '10.6'
 
 pod 'ddcli', :podspec => 'Podspecs/ddcli.podspec.json'
 pod 'MiscMerge', :podspec => 'Podspecs/MiscMerge.podspec.json'

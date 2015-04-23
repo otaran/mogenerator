@@ -4,17 +4,17 @@ PODS:
   - RegexKitLite (3.3)
 
 DEPENDENCIES:
-  - ddcli (from `ddcli.podspec.json`)
-  - MiscMerge (from `MiscMerge.podspec.json`)
-  - RegexKitLite (from `RegexKitLite.podspec.json`)
+  - ddcli (from `Podspecs/ddcli.podspec.json`)
+  - MiscMerge (from `Podspecs/MiscMerge.podspec.json`)
+  - RegexKitLite (from `Podspecs/RegexKitLite.podspec.json`)
 
 EXTERNAL SOURCES:
   ddcli:
-    :podspec: ddcli.podspec.json
+    :podspec: Podspecs/ddcli.podspec.json
   MiscMerge:
-    :podspec: MiscMerge.podspec.json
+    :podspec: Podspecs/MiscMerge.podspec.json
   RegexKitLite:
-    :podspec: RegexKitLite.podspec.json
+    :podspec: Podspecs/RegexKitLite.podspec.json
 
 SPEC CHECKSUMS:
   ddcli: efc14685cd4a1e6b7d3dff01e33231720ee27772
