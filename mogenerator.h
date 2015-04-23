@@ -7,27 +7,28 @@
 #import <CoreData/CoreData.h>
 #import <ddcli/DDCommandLineInterface.h>
 
-@interface MOGeneratorApp : NSObject <DDCliApplicationDelegate> {
-    NSString              *origModelBasePath;
-    NSString              *tempGeneratedMomFilePath;
-    NSManagedObjectModel  *model;
-    NSString              *configuration;
-    NSString              *baseClass;
-    NSString              *baseClassImport;
-    NSString              *baseClassForce;
-    NSString              *includem;
-    NSString              *includeh;
-    NSString              *templatePath;
-    NSString              *outputDir;
-    NSString              *machineDir;
-    NSString              *humanDir;
-    NSString              *templateGroup;
-    BOOL                  _help;
-    BOOL                  _version;
-    BOOL                  _listSourceFiles;
-    BOOL                  _orphaned;
-    BOOL                  _swift;
-    BOOL                  _v2;
-    NSMutableDictionary   *templateVar;
-}
+@interface MOGeneratorApp : NSObject <DDCliApplicationDelegate>
+
+@property (nonatomic, retain) NSString *origModelBasePath;
+@property (nonatomic, retain) NSString *tempGeneratedMomFilePath;
+@property (nonatomic, retain) NSManagedObjectModel *model;
+@property (nonatomic, retain) NSString *configuration;
+@property (nonatomic, retain) NSString *baseClass;
+@property (nonatomic, retain) NSString *baseClassImport;
+@property (nonatomic, retain) NSString *baseClassForce;
+@property (nonatomic, retain) NSString *includem;
+@property (nonatomic, retain) NSString *includeh;
+@property (nonatomic, retain) NSString *templatePath;
+@property (nonatomic, retain) NSString *outputDir;
+@property (nonatomic, retain) NSString *machineDir;
+@property (nonatomic, retain) NSString *humanDir;
+@property (nonatomic, retain) NSString *templateGroup;
+@property (nonatomic, assign) BOOL help;
+@property (nonatomic, assign) BOOL version;
+@property (nonatomic, assign) BOOL listSourceFiles;
+@property (nonatomic, assign) BOOL orphaned;
+@property (nonatomic, assign) BOOL swift;
+@property (nonatomic, assign) BOOL v2;
+@property (nonatomic, retain) NSMutableDictionary *templateVar;
+
 @end

@@ -22,15 +22,13 @@
 
 static NSString * const kTemplateVar = @"TemplateVar";
 
-@interface MogeneratorTemplateDesc : NSObject {
-    NSString *templateName;
-    NSString *templatePath;
-}
+@interface MogeneratorTemplateDesc : NSObject
+
+@property (nonatomic, retain) NSString *templateName;
+@property (nonatomic, retain) NSString *templatePath;
+
 - (id)initWithName:(NSString*)name_ path:(NSString*)path_;
-- (NSString*)templateName;
-- (void)setTemplateName:(NSString*)name_;
-- (NSString*)templatePath;
-- (void)setTemplatePath:(NSString*)path_;
+
 @end
 
 static MiscMergeEngine* engineWithTemplateDesc(MogeneratorTemplateDesc *templateDesc_) {
@@ -50,6 +48,22 @@ static MiscMergeEngine* engineWithTemplateDesc(MogeneratorTemplateDesc *template
 }
 
 @implementation MOGeneratorApp
+
+@synthesize origModelBasePath;
+@synthesize tempGeneratedMomFilePath;
+@synthesize model;
+@synthesize configuration;
+@synthesize baseClass;
+@synthesize baseClassImport;
+@synthesize baseClassForce;
+@synthesize includem;
+@synthesize includeh;
+@synthesize templatePath;
+@synthesize outputDir;
+@synthesize machineDir;
+@synthesize humanDir;
+@synthesize templateGroup;
+@synthesize templateVar;
 
 - (id)init {
     self = [super init];
@@ -626,38 +640,16 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
 - (id)initWithName:(NSString*)name_ path:(NSString*)path_ {
     self = [super init];
     if (self) {
-        templateName = [name_ retain];
-        templatePath = [path_ retain];
+        self.templateName = name_;
+        self.templatePath = path_;
     }
     return self;
 }
 
 - (void)dealloc {
-    [templateName release];
-    [templatePath release];
+    self.templateName = nil;
+    self.templatePath = nil;
     [super dealloc];
-}
-
-- (NSString*)templateName {
-    return templateName;
-}
-
-- (void)setTemplateName:(NSString*)name_ {
-    if (templateName != name_) {
-        [templateName release];
-        templateName = [name_ retain];
-    }
-}
-
-- (NSString*)templatePath {
-    return templatePath;
-}
-
-- (void)setTemplatePath:(NSString*)path_ {
-    if (templatePath != path_) {
-        [templatePath release];
-        templatePath = [path_ retain];
-    }
 }
 
 @end
