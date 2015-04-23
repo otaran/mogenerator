@@ -2,9 +2,9 @@ source 'https://github.com/cocoapods/specs.git'
 
 platform :osx
 
-pod 'ddcli', :podspec => 'ddcli.podspec.json'
-pod 'MiscMerge', :podspec => 'MiscMerge.podspec.json'
-pod 'RegexKitLite', :podspec => 'RegexKitLite.podspec.json'
+pod 'ddcli', :podspec => 'Podspecs/ddcli.podspec.json'
+pod 'MiscMerge', :podspec => 'Podspecs/MiscMerge.podspec.json'
+pod 'RegexKitLite', :podspec => 'Podspecs/RegexKitLite.podspec.json'
 
 post_install do |installer|
     ['ddcli', 'MiscMerge'].each do |patch|

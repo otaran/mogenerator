@@ -12,11 +12,30 @@
 		457C26CE139A1EF900BF00DD /* MKCNSEntityDescriptionAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 457C26CA139A1EF900BF00DD /* MKCNSEntityDescriptionAdditions.m */; };
 		457C26CF139A1EF900BF00DD /* MKCNSManagedObjectModelAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 457C26CC139A1EF900BF00DD /* MKCNSManagedObjectModelAdditions.m */; };
 		493EFFE51AE65EA20004952E /* FoundationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 493EFFE41AE65EA20004952E /* FoundationAdditions.m */; };
+		493F74A81AE913D8000F9CE1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 493F74A71AE913D8000F9CE1 /* README.md */; };
+		493F74AB1AE913FE000F9CE1 /* CONTRIBUTING.md in Sources */ = {isa = PBXBuildFile; fileRef = 493F74AA1AE913FE000F9CE1 /* CONTRIBUTING.md */; };
 		7931E67810FE982500175784 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7931E67710FE982500175784 /* libicucore.dylib */; };
 		79D2BF3F0ACFB25B00F3F141 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D2BF3E0ACFB25B00F3F141 /* CoreData.framework */; };
 		8DD76F9A0486AA7600D96B5E /* mogenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* mogenerator.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		493F74981AE8F9C5000F9CE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 493F74351AE8F9C3000F9CE1 /* PonsoTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 457C26881399FAC600BF00DD;
+			remoteInfo = PonsoTest;
+		};
+		493F749B1AE8F9C5000F9CE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 493F746A1AE8F9C4000F9CE1 /* PonsoTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 457C26881399FAC600BF00DD;
+			remoteInfo = PonsoTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* mogenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mogenerator.m; sourceTree = "<group>"; usesTabs = 0; };
@@ -30,6 +49,124 @@
 		457C26CC139A1EF900BF00DD /* MKCNSManagedObjectModelAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKCNSManagedObjectModelAdditions.m; sourceTree = "<group>"; };
 		493EFFE31AE65EA10004952E /* FoundationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationAdditions.h; sourceTree = "<group>"; };
 		493EFFE41AE65EA20004952E /* FoundationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationAdditions.m; sourceTree = "<group>"; };
+		493F736C1AE8F795000F9CE1 /* machine.swift.motemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = machine.swift.motemplate; sourceTree = "<group>"; };
+		493F736D1AE8F795000F9CE1 /* human.h.motemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = human.h.motemplate; sourceTree = "<group>"; };
+		493F736E1AE8F795000F9CE1 /* human.m.motemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = human.m.motemplate; sourceTree = "<group>"; };
+		493F736F1AE8F795000F9CE1 /* human.swift.motemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = human.swift.motemplate; sourceTree = "<group>"; };
+		493F73701AE8F795000F9CE1 /* machine.h.motemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = machine.h.motemplate; sourceTree = "<group>"; };
+		493F73711AE8F795000F9CE1 /* machine.m.motemplate */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = machine.m.motemplate; sourceTree = "<group>"; };
+		493F73721AE8F795000F9CE1 /* MyBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBaseClass.h; sourceTree = "<group>"; };
+		493F73731AE8F795000F9CE1 /* MyBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBaseClass.m; sourceTree = "<group>"; };
+		493F741A1AE8F9C3000F9CE1 /* Diff template readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Diff template readme.txt"; sourceTree = "<group>"; };
+		493F741B1AE8F9C3000F9CE1 /* machine.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.h.motemplate; sourceTree = "<group>"; };
+		493F741D1AE8F9C3000F9CE1 /* Generating Standard Objects from Core Data Models.webloc */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Generating Standard Objects from Core Data Models.webloc"; sourceTree = "<group>"; };
+		493F741E1AE8F9C3000F9CE1 /* human.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.h.motemplate; sourceTree = "<group>"; };
+		493F741F1AE8F9C3000F9CE1 /* human.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.m.motemplate; sourceTree = "<group>"; };
+		493F74201AE8F9C3000F9CE1 /* machine.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.h.motemplate; sourceTree = "<group>"; };
+		493F74211AE8F9C3000F9CE1 /* machine.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.m.motemplate; sourceTree = "<group>"; };
+		493F74231AE8F9C3000F9CE1 /* human.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.h.motemplate; sourceTree = "<group>"; };
+		493F74241AE8F9C3000F9CE1 /* human.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.m.motemplate; sourceTree = "<group>"; };
+		493F74251AE8F9C3000F9CE1 /* machine.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.h.motemplate; sourceTree = "<group>"; };
+		493F74261AE8F9C3000F9CE1 /* machine.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.m.motemplate; sourceTree = "<group>"; };
+		493F74271AE8F9C3000F9CE1 /* tweet.webloc */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = tweet.webloc; sourceTree = "<group>"; };
+		493F742B1AE8F9C3000F9CE1 /* ModelObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelObject.h; sourceTree = "<group>"; };
+		493F742C1AE8F9C3000F9CE1 /* ModelObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelObject.m; sourceTree = "<group>"; };
+		493F742D1AE8F9C3000F9CE1 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		493F74311AE8F9C3000F9CE1 /* MyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyModel.xcdatamodel; sourceTree = "<group>"; };
+		493F74331AE8F9C3000F9CE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		493F74341AE8F9C3000F9CE1 /* PonsoTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PonsoTest-Prefix.pch"; sourceTree = "<group>"; };
+		493F74351AE8F9C3000F9CE1 /* PonsoTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = PonsoTest.xcodeproj; sourceTree = "<group>"; };
+		493F743A1AE8F9C3000F9CE1 /* _ModelAssistant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ModelAssistant.h; sourceTree = "<group>"; };
+		493F743B1AE8F9C3000F9CE1 /* _ModelAssistant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ModelAssistant.m; sourceTree = "<group>"; };
+		493F743C1AE8F9C3000F9CE1 /* _ModelCompany.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ModelCompany.h; sourceTree = "<group>"; };
+		493F743D1AE8F9C3000F9CE1 /* _ModelCompany.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ModelCompany.m; sourceTree = "<group>"; };
+		493F743E1AE8F9C3000F9CE1 /* _ModelDepartment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ModelDepartment.h; sourceTree = "<group>"; };
+		493F743F1AE8F9C3000F9CE1 /* _ModelDepartment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ModelDepartment.m; sourceTree = "<group>"; };
+		493F74401AE8F9C3000F9CE1 /* _ModelDepartmentAssistant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ModelDepartmentAssistant.h; sourceTree = "<group>"; };
+		493F74411AE8F9C3000F9CE1 /* _ModelDepartmentAssistant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ModelDepartmentAssistant.m; sourceTree = "<group>"; };
+		493F74421AE8F9C3000F9CE1 /* _ModelDepartmentEmployee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ModelDepartmentEmployee.h; sourceTree = "<group>"; };
+		493F74431AE8F9C3000F9CE1 /* _ModelDepartmentEmployee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ModelDepartmentEmployee.m; sourceTree = "<group>"; };
+		493F74441AE8F9C3000F9CE1 /* _ModelEmployee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ModelEmployee.h; sourceTree = "<group>"; };
+		493F74451AE8F9C4000F9CE1 /* _ModelEmployee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ModelEmployee.m; sourceTree = "<group>"; };
+		493F74461AE8F9C4000F9CE1 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		493F74471AE8F9C4000F9CE1 /* ModelAssistant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelAssistant.h; sourceTree = "<group>"; };
+		493F74481AE8F9C4000F9CE1 /* ModelAssistant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelAssistant.m; sourceTree = "<group>"; };
+		493F74491AE8F9C4000F9CE1 /* ModelCompany.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelCompany.h; sourceTree = "<group>"; };
+		493F744A1AE8F9C4000F9CE1 /* ModelCompany.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelCompany.m; sourceTree = "<group>"; };
+		493F744B1AE8F9C4000F9CE1 /* ModelDepartment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelDepartment.h; sourceTree = "<group>"; };
+		493F744C1AE8F9C4000F9CE1 /* ModelDepartment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelDepartment.m; sourceTree = "<group>"; };
+		493F744D1AE8F9C4000F9CE1 /* ModelDepartmentAssistant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelDepartmentAssistant.h; sourceTree = "<group>"; };
+		493F744E1AE8F9C4000F9CE1 /* ModelDepartmentAssistant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelDepartmentAssistant.m; sourceTree = "<group>"; };
+		493F744F1AE8F9C4000F9CE1 /* ModelDepartmentEmployee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelDepartmentEmployee.h; sourceTree = "<group>"; };
+		493F74501AE8F9C4000F9CE1 /* ModelDepartmentEmployee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelDepartmentEmployee.m; sourceTree = "<group>"; };
+		493F74511AE8F9C4000F9CE1 /* ModelEmployee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelEmployee.h; sourceTree = "<group>"; };
+		493F74521AE8F9C4000F9CE1 /* ModelEmployee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelEmployee.m; sourceTree = "<group>"; };
+		493F74541AE8F9C4000F9CE1 /* human.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.h.motemplate; sourceTree = "<group>"; };
+		493F74551AE8F9C4000F9CE1 /* human.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.m.motemplate; sourceTree = "<group>"; };
+		493F74561AE8F9C4000F9CE1 /* machine.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.h.motemplate; sourceTree = "<group>"; };
+		493F74571AE8F9C4000F9CE1 /* machine.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.m.motemplate; sourceTree = "<group>"; };
+		493F74591AE8F9C4000F9CE1 /* human.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.h.motemplate; sourceTree = "<group>"; };
+		493F745A1AE8F9C4000F9CE1 /* human.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.m.motemplate; sourceTree = "<group>"; };
+		493F745B1AE8F9C4000F9CE1 /* machine.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.h.motemplate; sourceTree = "<group>"; };
+		493F745C1AE8F9C4000F9CE1 /* machine.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.m.motemplate; sourceTree = "<group>"; };
+		493F74601AE8F9C4000F9CE1 /* ModelObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelObject.h; sourceTree = "<group>"; };
+		493F74611AE8F9C4000F9CE1 /* ModelObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelObject.m; sourceTree = "<group>"; };
+		493F74621AE8F9C4000F9CE1 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		493F74661AE8F9C4000F9CE1 /* MyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyModel.xcdatamodel; sourceTree = "<group>"; };
+		493F74681AE8F9C4000F9CE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		493F74691AE8F9C4000F9CE1 /* PonsoTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PonsoTest-Prefix.pch"; sourceTree = "<group>"; };
+		493F746A1AE8F9C4000F9CE1 /* PonsoTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = PonsoTest.xcodeproj; sourceTree = "<group>"; };
+		493F746F1AE8F9C4000F9CE1 /* _ModelAssistant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ModelAssistant.h; sourceTree = "<group>"; };
+		493F74701AE8F9C4000F9CE1 /* _ModelAssistant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ModelAssistant.m; sourceTree = "<group>"; };
+		493F74711AE8F9C4000F9CE1 /* _ModelCompany.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ModelCompany.h; sourceTree = "<group>"; };
+		493F74721AE8F9C4000F9CE1 /* _ModelCompany.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ModelCompany.m; sourceTree = "<group>"; };
+		493F74731AE8F9C4000F9CE1 /* _ModelDepartment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ModelDepartment.h; sourceTree = "<group>"; };
+		493F74741AE8F9C4000F9CE1 /* _ModelDepartment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ModelDepartment.m; sourceTree = "<group>"; };
+		493F74751AE8F9C4000F9CE1 /* _ModelDepartmentAssistant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ModelDepartmentAssistant.h; sourceTree = "<group>"; };
+		493F74761AE8F9C4000F9CE1 /* _ModelDepartmentAssistant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ModelDepartmentAssistant.m; sourceTree = "<group>"; };
+		493F74771AE8F9C4000F9CE1 /* _ModelDepartmentEmployee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ModelDepartmentEmployee.h; sourceTree = "<group>"; };
+		493F74781AE8F9C4000F9CE1 /* _ModelDepartmentEmployee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ModelDepartmentEmployee.m; sourceTree = "<group>"; };
+		493F74791AE8F9C4000F9CE1 /* _ModelEmployee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ModelEmployee.h; sourceTree = "<group>"; };
+		493F747A1AE8F9C4000F9CE1 /* _ModelEmployee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ModelEmployee.m; sourceTree = "<group>"; };
+		493F747B1AE8F9C4000F9CE1 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		493F747C1AE8F9C4000F9CE1 /* ModelAssistant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelAssistant.h; sourceTree = "<group>"; };
+		493F747D1AE8F9C4000F9CE1 /* ModelAssistant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelAssistant.m; sourceTree = "<group>"; };
+		493F747E1AE8F9C4000F9CE1 /* ModelCompany.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelCompany.h; sourceTree = "<group>"; };
+		493F747F1AE8F9C4000F9CE1 /* ModelCompany.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelCompany.m; sourceTree = "<group>"; };
+		493F74801AE8F9C4000F9CE1 /* ModelDepartment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelDepartment.h; sourceTree = "<group>"; };
+		493F74811AE8F9C4000F9CE1 /* ModelDepartment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelDepartment.m; sourceTree = "<group>"; };
+		493F74821AE8F9C4000F9CE1 /* ModelDepartmentAssistant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelDepartmentAssistant.h; sourceTree = "<group>"; };
+		493F74831AE8F9C4000F9CE1 /* ModelDepartmentAssistant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelDepartmentAssistant.m; sourceTree = "<group>"; };
+		493F74841AE8F9C4000F9CE1 /* ModelDepartmentEmployee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelDepartmentEmployee.h; sourceTree = "<group>"; };
+		493F74851AE8F9C4000F9CE1 /* ModelDepartmentEmployee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelDepartmentEmployee.m; sourceTree = "<group>"; };
+		493F74861AE8F9C4000F9CE1 /* ModelEmployee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelEmployee.h; sourceTree = "<group>"; };
+		493F74871AE8F9C4000F9CE1 /* ModelEmployee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelEmployee.m; sourceTree = "<group>"; };
+		493F74891AE8F9C4000F9CE1 /* human.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.h.motemplate; sourceTree = "<group>"; };
+		493F748A1AE8F9C4000F9CE1 /* human.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.m.motemplate; sourceTree = "<group>"; };
+		493F748B1AE8F9C4000F9CE1 /* machine.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.h.motemplate; sourceTree = "<group>"; };
+		493F748C1AE8F9C4000F9CE1 /* machine.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.m.motemplate; sourceTree = "<group>"; };
+		493F748E1AE8F9C4000F9CE1 /* human.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.h.motemplate; sourceTree = "<group>"; };
+		493F748F1AE8F9C4000F9CE1 /* human.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.m.motemplate; sourceTree = "<group>"; };
+		493F74901AE8F9C4000F9CE1 /* machine.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.h.motemplate; sourceTree = "<group>"; };
+		493F74911AE8F9C4000F9CE1 /* machine.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.m.motemplate; sourceTree = "<group>"; };
+		493F74931AE8F9C4000F9CE1 /* human.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.h.motemplate; sourceTree = "<group>"; };
+		493F74941AE8F9C4000F9CE1 /* human.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = human.m.motemplate; sourceTree = "<group>"; };
+		493F74951AE8F9C4000F9CE1 /* machine.h.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.h.motemplate; sourceTree = "<group>"; };
+		493F74961AE8F9C4000F9CE1 /* machine.m.motemplate */ = {isa = PBXFileReference; lastKnownFileType = text; path = machine.m.motemplate; sourceTree = "<group>"; };
+		493F749D1AE911B0000F9CE1 /* generate.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate.sh; sourceTree = "<group>"; };
+		493F749E1AE911B7000F9CE1 /* PONSO-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "PONSO-LICENSE.txt"; sourceTree = "<group>"; };
+		493F74A01AE9128F000F9CE1 /* ddcli.patch */ = {isa = PBXFileReference; lastKnownFileType = text; path = ddcli.patch; sourceTree = "<group>"; };
+		493F74A11AE9128F000F9CE1 /* MiscMerge.patch */ = {isa = PBXFileReference; lastKnownFileType = text; path = MiscMerge.patch; sourceTree = "<group>"; };
+		493F74A41AE912F5000F9CE1 /* ddcli.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ddcli.podspec.json; sourceTree = "<group>"; };
+		493F74A51AE912F5000F9CE1 /* MiscMerge.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MiscMerge.podspec.json; sourceTree = "<group>"; };
+		493F74A61AE912F5000F9CE1 /* RegexKitLite.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RegexKitLite.podspec.json; sourceTree = "<group>"; };
+		493F74A71AE913D8000F9CE1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		493F74A91AE913F0000F9CE1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		493F74AA1AE913FE000F9CE1 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		493F74AC1AE91450000F9CE1 /* build-mogenerator-Info-plist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-mogenerator-Info-plist.sh"; sourceTree = "<group>"; };
+		493F74AE1AE91470000F9CE1 /* Description.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Description.plist; sourceTree = "<group>"; };
+		493F74AF1AE91470000F9CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		493F74B01AE91470000F9CE1 /* make_installer.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = make_installer.command; sourceTree = "<group>"; };
 		7931E67710FE982500175784 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		79A586510E48E8B400474C35 /* mogenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mogenerator.h; sourceTree = "<group>"; usesTabs = 0; };
 		79D2BF3E0ACFB25B00F3F141 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -60,6 +197,7 @@
 			children = (
 				08FB7795FE84155DC02AAC07 /* Source */,
 				457C26C6139A1EF900BF00DD /* ponso */,
+				493F736A1AE8F75D000F9CE1 /* Resources */,
 				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 				F2377160C62D358E3A6B2605 /* Pods */,
@@ -71,6 +209,7 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				493F74AD1AE91470000F9CE1 /* Installer */,
 				493EFFE31AE65EA10004952E /* FoundationAdditions.h */,
 				493EFFE41AE65EA20004952E /* FoundationAdditions.m */,
 				08FB7796FE84155DC02AAC07 /* mogenerator.m */,
@@ -102,6 +241,8 @@
 		457C26C6139A1EF900BF00DD /* ponso */ = {
 			isa = PBXGroup;
 			children = (
+				493F749D1AE911B0000F9CE1 /* generate.sh */,
+				493F749E1AE911B7000F9CE1 /* PONSO-LICENSE.txt */,
 				457C26C7139A1EF900BF00DD /* MKCDAGNode.h */,
 				457C26C8139A1EF900BF00DD /* MKCDAGNode.m */,
 				457C26C9139A1EF900BF00DD /* MKCNSEntityDescriptionAdditions.h */,
@@ -110,6 +251,379 @@
 				457C26CC139A1EF900BF00DD /* MKCNSManagedObjectModelAdditions.m */,
 			);
 			path = ponso;
+			sourceTree = "<group>";
+		};
+		493F736A1AE8F75D000F9CE1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				493F74AC1AE91450000F9CE1 /* build-mogenerator-Info-plist.sh */,
+				493F74AA1AE913FE000F9CE1 /* CONTRIBUTING.md */,
+				493F74A91AE913F0000F9CE1 /* LICENSE */,
+				493F74A71AE913D8000F9CE1 /* README.md */,
+				493F736B1AE8F76B000F9CE1 /* Templates */,
+				493F74181AE8F9A8000F9CE1 /* Contributed Templates */,
+				493F749F1AE91273000F9CE1 /* Patches */,
+				493F74A31AE912F5000F9CE1 /* Podspecs */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		493F736B1AE8F76B000F9CE1 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				493F736C1AE8F795000F9CE1 /* machine.swift.motemplate */,
+				493F736D1AE8F795000F9CE1 /* human.h.motemplate */,
+				493F736E1AE8F795000F9CE1 /* human.m.motemplate */,
+				493F736F1AE8F795000F9CE1 /* human.swift.motemplate */,
+				493F73701AE8F795000F9CE1 /* machine.h.motemplate */,
+				493F73711AE8F795000F9CE1 /* machine.m.motemplate */,
+				493F73721AE8F795000F9CE1 /* MyBaseClass.h */,
+				493F73731AE8F795000F9CE1 /* MyBaseClass.m */,
+			);
+			name = Templates;
+			path = templates;
+			sourceTree = "<group>";
+		};
+		493F74181AE8F9A8000F9CE1 /* Contributed Templates */ = {
+			isa = PBXGroup;
+			children = (
+				493F74191AE8F9C3000F9CE1 /* Brian Webster */,
+				493F741C1AE8F9C3000F9CE1 /* Dan Wood */,
+				493F74221AE8F9C3000F9CE1 /* Louis Gerbarg */,
+				493F74281AE8F9C3000F9CE1 /* Nikita Zhuk */,
+				493F74581AE8F9C4000F9CE1 /* rentzsch non-dynamic */,
+				493F745D1AE8F9C4000F9CE1 /* Tyrone Trevorrow */,
+			);
+			name = "Contributed Templates";
+			path = "contributed templates";
+			sourceTree = "<group>";
+		};
+		493F74191AE8F9C3000F9CE1 /* Brian Webster */ = {
+			isa = PBXGroup;
+			children = (
+				493F741A1AE8F9C3000F9CE1 /* Diff template readme.txt */,
+				493F741B1AE8F9C3000F9CE1 /* machine.h.motemplate */,
+			);
+			path = "Brian Webster";
+			sourceTree = "<group>";
+		};
+		493F741C1AE8F9C3000F9CE1 /* Dan Wood */ = {
+			isa = PBXGroup;
+			children = (
+				493F741D1AE8F9C3000F9CE1 /* Generating Standard Objects from Core Data Models.webloc */,
+				493F741E1AE8F9C3000F9CE1 /* human.h.motemplate */,
+				493F741F1AE8F9C3000F9CE1 /* human.m.motemplate */,
+				493F74201AE8F9C3000F9CE1 /* machine.h.motemplate */,
+				493F74211AE8F9C3000F9CE1 /* machine.m.motemplate */,
+			);
+			path = "Dan Wood";
+			sourceTree = "<group>";
+		};
+		493F74221AE8F9C3000F9CE1 /* Louis Gerbarg */ = {
+			isa = PBXGroup;
+			children = (
+				493F74231AE8F9C3000F9CE1 /* human.h.motemplate */,
+				493F74241AE8F9C3000F9CE1 /* human.m.motemplate */,
+				493F74251AE8F9C3000F9CE1 /* machine.h.motemplate */,
+				493F74261AE8F9C3000F9CE1 /* machine.m.motemplate */,
+				493F74271AE8F9C3000F9CE1 /* tweet.webloc */,
+			);
+			path = "Louis Gerbarg";
+			sourceTree = "<group>";
+		};
+		493F74281AE8F9C3000F9CE1 /* Nikita Zhuk */ = {
+			isa = PBXGroup;
+			children = (
+				493F74291AE8F9C3000F9CE1 /* ponso */,
+			);
+			path = "Nikita Zhuk";
+			sourceTree = "<group>";
+		};
+		493F74291AE8F9C3000F9CE1 /* ponso */ = {
+			isa = PBXGroup;
+			children = (
+				493F742A1AE8F9C3000F9CE1 /* code */,
+				493F742D1AE8F9C3000F9CE1 /* README.txt */,
+				493F742E1AE8F9C3000F9CE1 /* sample project */,
+				493F74531AE8F9C4000F9CE1 /* templates */,
+			);
+			path = ponso;
+			sourceTree = "<group>";
+		};
+		493F742A1AE8F9C3000F9CE1 /* code */ = {
+			isa = PBXGroup;
+			children = (
+				493F742B1AE8F9C3000F9CE1 /* ModelObject.h */,
+				493F742C1AE8F9C3000F9CE1 /* ModelObject.m */,
+			);
+			path = code;
+			sourceTree = "<group>";
+		};
+		493F742E1AE8F9C3000F9CE1 /* sample project */ = {
+			isa = PBXGroup;
+			children = (
+				493F742F1AE8F9C3000F9CE1 /* PonsoTest */,
+			);
+			path = "sample project";
+			sourceTree = "<group>";
+		};
+		493F742F1AE8F9C3000F9CE1 /* PonsoTest */ = {
+			isa = PBXGroup;
+			children = (
+				493F74301AE8F9C3000F9CE1 /* MyModel.xcdatamodeld */,
+				493F74321AE8F9C3000F9CE1 /* PonsoTest */,
+				493F74351AE8F9C3000F9CE1 /* PonsoTest.xcodeproj */,
+				493F74381AE8F9C3000F9CE1 /* Sources */,
+			);
+			path = PonsoTest;
+			sourceTree = "<group>";
+		};
+		493F74321AE8F9C3000F9CE1 /* PonsoTest */ = {
+			isa = PBXGroup;
+			children = (
+				493F74331AE8F9C3000F9CE1 /* main.m */,
+				493F74341AE8F9C3000F9CE1 /* PonsoTest-Prefix.pch */,
+			);
+			path = PonsoTest;
+			sourceTree = "<group>";
+		};
+		493F74361AE8F9C3000F9CE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				493F74991AE8F9C5000F9CE1 /* PonsoTest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		493F74381AE8F9C3000F9CE1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				493F74391AE8F9C3000F9CE1 /* DataModel */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		493F74391AE8F9C3000F9CE1 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				493F743A1AE8F9C3000F9CE1 /* _ModelAssistant.h */,
+				493F743B1AE8F9C3000F9CE1 /* _ModelAssistant.m */,
+				493F743C1AE8F9C3000F9CE1 /* _ModelCompany.h */,
+				493F743D1AE8F9C3000F9CE1 /* _ModelCompany.m */,
+				493F743E1AE8F9C3000F9CE1 /* _ModelDepartment.h */,
+				493F743F1AE8F9C3000F9CE1 /* _ModelDepartment.m */,
+				493F74401AE8F9C3000F9CE1 /* _ModelDepartmentAssistant.h */,
+				493F74411AE8F9C3000F9CE1 /* _ModelDepartmentAssistant.m */,
+				493F74421AE8F9C3000F9CE1 /* _ModelDepartmentEmployee.h */,
+				493F74431AE8F9C3000F9CE1 /* _ModelDepartmentEmployee.m */,
+				493F74441AE8F9C3000F9CE1 /* _ModelEmployee.h */,
+				493F74451AE8F9C4000F9CE1 /* _ModelEmployee.m */,
+				493F74461AE8F9C4000F9CE1 /* Model.h */,
+				493F74471AE8F9C4000F9CE1 /* ModelAssistant.h */,
+				493F74481AE8F9C4000F9CE1 /* ModelAssistant.m */,
+				493F74491AE8F9C4000F9CE1 /* ModelCompany.h */,
+				493F744A1AE8F9C4000F9CE1 /* ModelCompany.m */,
+				493F744B1AE8F9C4000F9CE1 /* ModelDepartment.h */,
+				493F744C1AE8F9C4000F9CE1 /* ModelDepartment.m */,
+				493F744D1AE8F9C4000F9CE1 /* ModelDepartmentAssistant.h */,
+				493F744E1AE8F9C4000F9CE1 /* ModelDepartmentAssistant.m */,
+				493F744F1AE8F9C4000F9CE1 /* ModelDepartmentEmployee.h */,
+				493F74501AE8F9C4000F9CE1 /* ModelDepartmentEmployee.m */,
+				493F74511AE8F9C4000F9CE1 /* ModelEmployee.h */,
+				493F74521AE8F9C4000F9CE1 /* ModelEmployee.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		493F74531AE8F9C4000F9CE1 /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				493F74541AE8F9C4000F9CE1 /* human.h.motemplate */,
+				493F74551AE8F9C4000F9CE1 /* human.m.motemplate */,
+				493F74561AE8F9C4000F9CE1 /* machine.h.motemplate */,
+				493F74571AE8F9C4000F9CE1 /* machine.m.motemplate */,
+			);
+			path = templates;
+			sourceTree = "<group>";
+		};
+		493F74581AE8F9C4000F9CE1 /* rentzsch non-dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				493F74591AE8F9C4000F9CE1 /* human.h.motemplate */,
+				493F745A1AE8F9C4000F9CE1 /* human.m.motemplate */,
+				493F745B1AE8F9C4000F9CE1 /* machine.h.motemplate */,
+				493F745C1AE8F9C4000F9CE1 /* machine.m.motemplate */,
+			);
+			path = "rentzsch non-dynamic";
+			sourceTree = "<group>";
+		};
+		493F745D1AE8F9C4000F9CE1 /* Tyrone Trevorrow */ = {
+			isa = PBXGroup;
+			children = (
+				493F745E1AE8F9C4000F9CE1 /* ponso */,
+			);
+			path = "Tyrone Trevorrow";
+			sourceTree = "<group>";
+		};
+		493F745E1AE8F9C4000F9CE1 /* ponso */ = {
+			isa = PBXGroup;
+			children = (
+				493F745F1AE8F9C4000F9CE1 /* code */,
+				493F74621AE8F9C4000F9CE1 /* README.txt */,
+				493F74631AE8F9C4000F9CE1 /* sample project */,
+				493F74881AE8F9C4000F9CE1 /* templates */,
+			);
+			path = ponso;
+			sourceTree = "<group>";
+		};
+		493F745F1AE8F9C4000F9CE1 /* code */ = {
+			isa = PBXGroup;
+			children = (
+				493F74601AE8F9C4000F9CE1 /* ModelObject.h */,
+				493F74611AE8F9C4000F9CE1 /* ModelObject.m */,
+			);
+			path = code;
+			sourceTree = "<group>";
+		};
+		493F74631AE8F9C4000F9CE1 /* sample project */ = {
+			isa = PBXGroup;
+			children = (
+				493F74641AE8F9C4000F9CE1 /* PonsoTest */,
+			);
+			path = "sample project";
+			sourceTree = "<group>";
+		};
+		493F74641AE8F9C4000F9CE1 /* PonsoTest */ = {
+			isa = PBXGroup;
+			children = (
+				493F74651AE8F9C4000F9CE1 /* MyModel.xcdatamodeld */,
+				493F74671AE8F9C4000F9CE1 /* PonsoTest */,
+				493F746A1AE8F9C4000F9CE1 /* PonsoTest.xcodeproj */,
+				493F746D1AE8F9C4000F9CE1 /* Sources */,
+			);
+			path = PonsoTest;
+			sourceTree = "<group>";
+		};
+		493F74671AE8F9C4000F9CE1 /* PonsoTest */ = {
+			isa = PBXGroup;
+			children = (
+				493F74681AE8F9C4000F9CE1 /* main.m */,
+				493F74691AE8F9C4000F9CE1 /* PonsoTest-Prefix.pch */,
+			);
+			path = PonsoTest;
+			sourceTree = "<group>";
+		};
+		493F746B1AE8F9C4000F9CE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				493F749C1AE8F9C5000F9CE1 /* PonsoTest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		493F746D1AE8F9C4000F9CE1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				493F746E1AE8F9C4000F9CE1 /* DataModel */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		493F746E1AE8F9C4000F9CE1 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				493F746F1AE8F9C4000F9CE1 /* _ModelAssistant.h */,
+				493F74701AE8F9C4000F9CE1 /* _ModelAssistant.m */,
+				493F74711AE8F9C4000F9CE1 /* _ModelCompany.h */,
+				493F74721AE8F9C4000F9CE1 /* _ModelCompany.m */,
+				493F74731AE8F9C4000F9CE1 /* _ModelDepartment.h */,
+				493F74741AE8F9C4000F9CE1 /* _ModelDepartment.m */,
+				493F74751AE8F9C4000F9CE1 /* _ModelDepartmentAssistant.h */,
+				493F74761AE8F9C4000F9CE1 /* _ModelDepartmentAssistant.m */,
+				493F74771AE8F9C4000F9CE1 /* _ModelDepartmentEmployee.h */,
+				493F74781AE8F9C4000F9CE1 /* _ModelDepartmentEmployee.m */,
+				493F74791AE8F9C4000F9CE1 /* _ModelEmployee.h */,
+				493F747A1AE8F9C4000F9CE1 /* _ModelEmployee.m */,
+				493F747B1AE8F9C4000F9CE1 /* Model.h */,
+				493F747C1AE8F9C4000F9CE1 /* ModelAssistant.h */,
+				493F747D1AE8F9C4000F9CE1 /* ModelAssistant.m */,
+				493F747E1AE8F9C4000F9CE1 /* ModelCompany.h */,
+				493F747F1AE8F9C4000F9CE1 /* ModelCompany.m */,
+				493F74801AE8F9C4000F9CE1 /* ModelDepartment.h */,
+				493F74811AE8F9C4000F9CE1 /* ModelDepartment.m */,
+				493F74821AE8F9C4000F9CE1 /* ModelDepartmentAssistant.h */,
+				493F74831AE8F9C4000F9CE1 /* ModelDepartmentAssistant.m */,
+				493F74841AE8F9C4000F9CE1 /* ModelDepartmentEmployee.h */,
+				493F74851AE8F9C4000F9CE1 /* ModelDepartmentEmployee.m */,
+				493F74861AE8F9C4000F9CE1 /* ModelEmployee.h */,
+				493F74871AE8F9C4000F9CE1 /* ModelEmployee.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		493F74881AE8F9C4000F9CE1 /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				493F74891AE8F9C4000F9CE1 /* human.h.motemplate */,
+				493F748A1AE8F9C4000F9CE1 /* human.m.motemplate */,
+				493F748B1AE8F9C4000F9CE1 /* machine.h.motemplate */,
+				493F748C1AE8F9C4000F9CE1 /* machine.m.motemplate */,
+				493F748D1AE8F9C4000F9CE1 /* NSSet */,
+			);
+			path = templates;
+			sourceTree = "<group>";
+		};
+		493F748D1AE8F9C4000F9CE1 /* NSSet */ = {
+			isa = PBXGroup;
+			children = (
+				493F748E1AE8F9C4000F9CE1 /* human.h.motemplate */,
+				493F748F1AE8F9C4000F9CE1 /* human.m.motemplate */,
+				493F74901AE8F9C4000F9CE1 /* machine.h.motemplate */,
+				493F74911AE8F9C4000F9CE1 /* machine.m.motemplate */,
+				493F74921AE8F9C4000F9CE1 /* NSCoding */,
+			);
+			path = NSSet;
+			sourceTree = "<group>";
+		};
+		493F74921AE8F9C4000F9CE1 /* NSCoding */ = {
+			isa = PBXGroup;
+			children = (
+				493F74931AE8F9C4000F9CE1 /* human.h.motemplate */,
+				493F74941AE8F9C4000F9CE1 /* human.m.motemplate */,
+				493F74951AE8F9C4000F9CE1 /* machine.h.motemplate */,
+				493F74961AE8F9C4000F9CE1 /* machine.m.motemplate */,
+			);
+			path = NSCoding;
+			sourceTree = "<group>";
+		};
+		493F749F1AE91273000F9CE1 /* Patches */ = {
+			isa = PBXGroup;
+			children = (
+				493F74A01AE9128F000F9CE1 /* ddcli.patch */,
+				493F74A11AE9128F000F9CE1 /* MiscMerge.patch */,
+			);
+			path = Patches;
+			sourceTree = "<group>";
+		};
+		493F74A31AE912F5000F9CE1 /* Podspecs */ = {
+			isa = PBXGroup;
+			children = (
+				493F74A41AE912F5000F9CE1 /* ddcli.podspec.json */,
+				493F74A51AE912F5000F9CE1 /* MiscMerge.podspec.json */,
+				493F74A61AE912F5000F9CE1 /* RegexKitLite.podspec.json */,
+			);
+			path = Podspecs;
+			sourceTree = "<group>";
+		};
+		493F74AD1AE91470000F9CE1 /* Installer */ = {
+			isa = PBXGroup;
+			children = (
+				493F74AE1AE91470000F9CE1 /* Description.plist */,
+				493F74AF1AE91470000F9CE1 /* Info.plist */,
+				493F74B01AE91470000F9CE1 /* make_installer.command */,
+			);
+			name = Installer;
+			path = installer;
 			sourceTree = "<group>";
 		};
 		B6911EEBE608F28530684922 /* Frameworks */ = {
@@ -169,12 +683,39 @@
 			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* mogenerator */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 493F74361AE8F9C3000F9CE1 /* Products */;
+					ProjectRef = 493F74351AE8F9C3000F9CE1 /* PonsoTest.xcodeproj */;
+				},
+				{
+					ProductGroup = 493F746B1AE8F9C4000F9CE1 /* Products */;
+					ProjectRef = 493F746A1AE8F9C4000F9CE1 /* PonsoTest.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8DD76F960486AA7600D96B5E /* mogenerator */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		493F74991AE8F9C5000F9CE1 /* PonsoTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = PonsoTest;
+			remoteRef = 493F74981AE8F9C5000F9CE1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		493F749C1AE8F9C5000F9CE1 /* PonsoTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = PonsoTest;
+			remoteRef = 493F749B1AE8F9C5000F9CE1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		31A35CB6606E7134ADF18777 /* Copy Pods Resources */ = {
@@ -227,9 +768,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				493F74A81AE913D8000F9CE1 /* README.md in Sources */,
 				8DD76F9A0486AA7600D96B5E /* mogenerator.m in Sources */,
 				493EFFE51AE65EA20004952E /* FoundationAdditions.m in Sources */,
 				457C26CD139A1EF900BF00DD /* MKCDAGNode.m in Sources */,
+				493F74AB1AE913FE000F9CE1 /* CONTRIBUTING.md in Sources */,
 				457C26CE139A1EF900BF00DD /* MKCNSEntityDescriptionAdditions.m in Sources */,
 				457C26CF139A1EF900BF00DD /* MKCNSManagedObjectModelAdditions.m in Sources */,
 			);
@@ -325,6 +868,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		493F74301AE8F9C3000F9CE1 /* MyModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				493F74311AE8F9C3000F9CE1 /* MyModel.xcdatamodel */,
+			);
+			currentVersion = 493F74311AE8F9C3000F9CE1 /* MyModel.xcdatamodel */;
+			path = MyModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		493F74651AE8F9C4000F9CE1 /* MyModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				493F74661AE8F9C4000F9CE1 /* MyModel.xcdatamodel */,
+			);
+			currentVersion = 493F74661AE8F9C4000F9CE1 /* MyModel.xcdatamodel */;
+			path = MyModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
 }
