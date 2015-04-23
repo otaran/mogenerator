@@ -5,51 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-
 #import <ddcli/DDCommandLineInterface.h>
-
-@interface NSManagedObjectModel (entitiesWithACustomSubclassVerbose)
-- (NSArray*)entitiesWithACustomSubclassInConfiguration:(NSString*)configuration_ verbose:(BOOL)verbose_;
-@end
-
-@interface NSEntityDescription (customBaseClass)
-- (BOOL)hasCustomClass;
-- (BOOL)hasSuperentity;
-- (BOOL)hasCustomSuperentity;
-- (BOOL)hasAdditionalHeaderFile;
-- (NSString*)customSuperentity;
-- (NSString*)forcedCustomBaseClass;
-- (NSString*)additionalHeaderFileName;
-- (void)_processPredicate:(NSPredicate*)predicate_ bindings:(NSMutableArray*)bindings_;
-- (NSArray*)prettyFetchRequests;
-@end
-
-@interface NSAttributeDescription (typing)
-- (BOOL)hasScalarAttributeType;
-- (NSString*)scalarAttributeType;
-- (NSString*)scalarAccessorMethodName;
-- (NSString*)scalarFactoryMethodName;
-- (BOOL)hasDefinedAttributeType;
-- (NSArray*)objectAttributeTransformableProtocols;
-- (BOOL)hasAttributeTransformableProtocols;
-- (NSString*)objectAttributeClassName;
-- (NSString*)objectAttributeType;
-- (BOOL)hasTransformableAttributeType;
-- (BOOL)isReadonly;
-@end
-
-@interface NSRelationshipDescription (collectionClassName)
-- (NSString*)mutableCollectionClassName;
-- (NSString*)immutableCollectionClassName;
-- (BOOL)jr_isOrdered;
-@end
-@interface NSObject (JustHereToSuppressIsOrderedNotImplementedCompilerWarning)
-- (BOOL)isOrdered;
-@end
-
-@interface NSString (camelCaseString)
-- (NSString*)camelCaseString;
-@end
 
 @interface MOGeneratorApp : NSObject <DDCliApplicationDelegate> {
     NSString              *origModelBasePath;
