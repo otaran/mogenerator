@@ -201,8 +201,8 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
     @try {
         NSTask *task = [[[NSTask alloc] init] autorelease];
         [task setLaunchPath:@"/usr/bin/xcode-select"];
-        
-        [task setArguments:[NSArray arrayWithObject:@"-print-path"]];
+    
+        [task setArguments:@[@"-print-path"]];
         
         NSPipe *pipe = [NSPipe pipe];
         [task setStandardOutput:pipe];
@@ -295,11 +295,11 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
         
         NSMutableString *momcOptions = [NSMutableString string];
         {{
-            NSArray *supportedMomcOptions = [NSArray arrayWithObjects:
-                                             @"MOMC_NO_WARNINGS",
-                                             @"MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS",
-                                             @"MOMC_SUPPRESS_INVERSE_TRANSIENT_ERROR",
-                                             nil];
+            NSArray *supportedMomcOptions = @[
+                @"MOMC_NO_WARNINGS",
+                @"MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS",
+                @"MOMC_SUPPRESS_INVERSE_TRANSIENT_ERROR",
+            ];
             for (NSString *momcOption in supportedMomcOptions) {
                 if ([[[NSProcessInfo processInfo] environment] objectForKey:momcOption]) {
                     [momcOptions appendFormat:@" -%@ ", momcOption];
