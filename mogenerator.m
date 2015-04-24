@@ -6,7 +6,6 @@
 #import "mogenerator.h"
 #import <RegexKitLite/RegexKitLite.h>
 
-#import <MiscMerge/MiscMergeTemplate.h>
 #import <MiscMerge/MiscMergeEngine.h>
 #import "FoundationAdditions.h"
 
@@ -15,22 +14,6 @@
 #import "MogeneratorTemplateDesc.h"
 
 static NSString * const kTemplateVar = @"TemplateVar";
-
-static MiscMergeEngine* engineWithTemplateDesc(MogeneratorTemplateDesc *templateDesc_) {
-    MiscMergeTemplate *template = [[[MiscMergeTemplate alloc] init] autorelease];
-    [template setStartDelimiter:@"<$" endDelimiter:@"$>"];
-    if ([templateDesc_ templatePath]) {
-        [template parseContentsOfFile:[templateDesc_ templatePath]];
-    } else {
-        NSData *templateData = [[NSBundle mainBundle] objectForInfoDictionaryKey:[templateDesc_ templateName]];
-        assert(templateData);
-        NSString *templateString = [[[NSString alloc] initWithData:templateData encoding:NSASCIIStringEncoding] autorelease];
-        [template setFilename:[@"x-__info_plist://" stringByAppendingString:[templateDesc_ templateName]]];
-        [template parseString:templateString];
-    }
-    
-    return [[[MiscMergeEngine alloc] initWithTemplate:template] autorelease];
-}
 
 @implementation MOGeneratorApp
 
@@ -433,18 +416,18 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
         MiscMergeEngine *humanM = nil;
 
         if (_swift) {
-            machineH = engineWithTemplateDesc([self templateDescNamed:@"machine.swift.motemplate"]);
+            machineH = [[self templateDescNamed:@"machine.swift.motemplate"] engine];
             assert(machineH);
-            humanH = engineWithTemplateDesc([self templateDescNamed:@"human.swift.motemplate"]);
+            humanH = [[self templateDescNamed:@"human.swift.motemplate"] engine];
             assert(humanH);
         } else {
-            machineH = engineWithTemplateDesc([self templateDescNamed:@"machine.h.motemplate"]);
+            machineH = [[self templateDescNamed:@"machine.h.motemplate"] engine];
             assert(machineH);
-            machineM = engineWithTemplateDesc([self templateDescNamed:@"machine.m.motemplate"]);
+            machineM = [[self templateDescNamed:@"machine.m.motemplate"] engine];
             assert(machineM);
-            humanH = engineWithTemplateDesc([self templateDescNamed:@"human.h.motemplate"]);
+            humanH = [[self templateDescNamed:@"human.h.motemplate"] engine];
             assert(humanH);
-            humanM = engineWithTemplateDesc([self templateDescNamed:@"human.m.motemplate"]);
+            humanM = [[self templateDescNamed:@"human.m.motemplate"] engine];
             assert(humanM);
         }
 

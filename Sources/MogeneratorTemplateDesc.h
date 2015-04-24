@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class MiscMergeEngine;
+
 @interface MogeneratorTemplateDesc : NSObject
 
 @property (nonatomic, retain) NSString *templateName;
 @property (nonatomic, retain) NSString *templatePath;
 
-- (id)initWithName:(NSString*)name_ path:(NSString*)path_;
+- (instancetype)initWithName:(NSString *)name path:(NSString *)path;
+
+- (MiscMergeEngine *)engine;
 
 @end
