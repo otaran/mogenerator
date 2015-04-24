@@ -347,28 +347,11 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
         return;
     }
     
-    NSString        *errorString = nil;
-    NSError         *error = nil;
-    NSFileManager   *fm = [NSFileManager defaultManager];
-    BOOL            isDir = NO;
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSError *error = nil;
     
-    //  Test to see if the path exists
-    if ([fm fileExistsAtPath:path isDirectory:&isDir]) {
-        if (!isDir) {
-            errorString = [NSString stringWithFormat:@"%@ Directory path (%@) exists as a file.", type, path];
-        }
-    }
-    //  Try to create path
-    else {
-        if (![fm createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error]) {
-            errorString = [NSString stringWithFormat:@"Couldn't create %@ Directory (%@):%@", type, path, [error localizedDescription]];
-        }
-    }
-    
-    if (errorString != nil) {
-
-        //  Print error message and exit with IO error
-        ddprintf(errorString);
+    if (![fm createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error]) {
+        ddprintf(@"Couldn't create %@ Directory (%@): %@", type, path, error.localizedDescription);
         exit(EX_IOERR);
     }
 }
