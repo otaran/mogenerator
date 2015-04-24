@@ -396,33 +396,8 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
     NSFileManager *fm = [NSFileManager defaultManager];
     
     if (_orphaned) {
-        NSMutableDictionary *entityFilesByName = [NSMutableDictionary dictionary];
-        
-        NSArray *srcDirs = [NSArray arrayWithObjects:machineDir, humanDir, nil];
-        for (NSString *srcDir in srcDirs) {
-            if (![srcDir length]) {
-                srcDir = [fm currentDirectoryPath];
-            }
-            for (NSString *srcFileName in [fm subpathsAtPath:srcDir]) {
-                #define MANAGED_OBJECT_SOURCE_FILE_REGEX    @"_?([a-zA-Z0-9_]+MO).(h|m|mm)" // Sadly /^(*MO).(h|m|mm)$/ doesn't work.
-                if ([srcFileName isMatchedByRegex:MANAGED_OBJECT_SOURCE_FILE_REGEX]) {
-                    NSString *entityName = [[srcFileName captureComponentsMatchedByRegex:MANAGED_OBJECT_SOURCE_FILE_REGEX] objectAtIndex:1];
-                    if (![entityFilesByName objectForKey:entityName]) {
-                        [entityFilesByName setObject:[NSMutableSet set] forKey:entityName];
-                    }
-                    [[entityFilesByName objectForKey:entityName] addObject:srcFileName];
-                }
-            }
-        }
-        for (NSEntityDescription *entity in [model entitiesWithACustomSubclassInConfiguration:configuration verbose:NO]) {
-            [entityFilesByName removeObjectForKey:[entity managedObjectClassName]];
-        }
-        for (NSSet *orphanedFiles in entityFilesByName) {
-            for (NSString *orphanedFile in orphanedFiles) {
-                ddprintf(@"%@\n", orphanedFile);
-            }
-        }
-        
+        [self printOrphanedFileNames];
+    
         return EXIT_SUCCESS;
     }
     
@@ -608,5 +583,39 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
     return EXIT_SUCCESS;
 }
 
+- (void)printOrphanedFileNames
+{
+    NSFileManager *fm = [NSFileManager defaultManager];
+    
+    NSMutableDictionary *entityFilesByName = [NSMutableDictionary dictionary];
+    
+    NSArray *srcDirs = [NSArray arrayWithObjects:machineDir, humanDir, nil];
+    for (NSString *srcDir in srcDirs) {
+        if (srcDir.length == 0) {
+            srcDir = fm.currentDirectoryPath;
+        }
+        for (NSString *srcFileName in [fm subpathsAtPath:srcDir]) {
+            // Sadly /^(*MO).(h|m|mm)$/ doesn't work.
+            NSString *ManagedObjectSourceFileRegex = @"_?([a-zA-Z0-9_]+MO).(h|m|mm)";
+            if ([srcFileName isMatchedByRegex:ManagedObjectSourceFileRegex]) {
+                NSString *entityName = [[srcFileName captureComponentsMatchedByRegex:ManagedObjectSourceFileRegex] objectAtIndex:1];
+                if (![entityFilesByName objectForKey:entityName]) {
+                    [entityFilesByName setObject:[NSMutableSet set] forKey:entityName];
+                }
+                [[entityFilesByName objectForKey:entityName] addObject:srcFileName];
+            }
+        }
+    }
+    
+    for (NSEntityDescription *entity in [model entitiesWithACustomSubclassInConfiguration:configuration verbose:NO]) {
+        [entityFilesByName removeObjectForKey:[entity managedObjectClassName]];
+    }
+    
+    for (NSSet *orphanedFiles in entityFilesByName) {
+        for (NSString *orphanedFile in orphanedFiles) {
+            ddprintf(@"%@\n", orphanedFile);
+        }
+    }
+}
 
 @end
