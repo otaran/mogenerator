@@ -439,9 +439,9 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
         for (NSEntityDescription *entity in [model entitiesWithACustomSubclassInConfiguration:configuration verbose:NO]) {
             [entityFilesByName removeObjectForKey:[entity managedObjectClassName]];
         }
-        for (NSSet *ophanedFiles in entityFilesByName) {
-            for (NSString *ophanedFile in ophanedFiles) {
-                ddprintf(@"%@\n", ophanedFile);
+        for (NSSet *orphanedFiles in entityFilesByName) {
+            for (NSString *orphanedFile in orphanedFiles) {
+                ddprintf(@"%@\n", orphanedFile);
             }
         }
         
