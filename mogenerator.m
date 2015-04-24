@@ -12,17 +12,9 @@
 
 #import "NSManagedObjectModel+MogeneratorExtensions.h"
 #import "GlobalVariables.h"
+#import "MogeneratorTemplateDesc.h"
 
 static NSString * const kTemplateVar = @"TemplateVar";
-
-@interface MogeneratorTemplateDesc : NSObject
-
-@property (nonatomic, retain) NSString *templateName;
-@property (nonatomic, retain) NSString *templatePath;
-
-- (id)initWithName:(NSString*)name_ path:(NSString*)path_;
-
-@end
 
 static MiscMergeEngine* engineWithTemplateDesc(MogeneratorTemplateDesc *templateDesc_) {
     MiscMergeTemplate *template = [[[MiscMergeTemplate alloc] init] autorelease];
@@ -616,23 +608,5 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
     return EXIT_SUCCESS;
 }
 
-@end
-
-@implementation MogeneratorTemplateDesc
-
-- (id)initWithName:(NSString*)name_ path:(NSString*)path_ {
-    self = [super init];
-    if (self) {
-        self.templateName = name_;
-        self.templatePath = path_;
-    }
-    return self;
-}
-
-- (void)dealloc {
-    self.templateName = nil;
-    self.templatePath = nil;
-    [super dealloc];
-}
 
 @end
