@@ -7,17 +7,10 @@
 #import <RegexKitLite/RegexKitLite.h>
 
 #import <MiscMerge/MiscMergeTemplate.h>
-#import <MiscMerge/MiscMergeCommandBlock.h>
 #import <MiscMerge/MiscMergeEngine.h>
 #import "FoundationAdditions.h"
-#import <MiscMerge/NSString+MiscAdditions.h>
 
-#import "NSAttributeDescription+MogeneratorExtensions.h"
-#import "NSEntityDescription+MogeneratorExtensions.h"
 #import "NSManagedObjectModel+MogeneratorExtensions.h"
-#import "NSRelationshipDescription+MogeneratorExtensions.h"
-#import "NSString+MogeneratorExtensions.h"
-#import "UserInfoKeys.h"
 #import "GlobalVariables.h"
 
 static NSString * const kTemplateVar = @"TemplateVar";
