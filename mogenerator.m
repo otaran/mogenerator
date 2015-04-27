@@ -359,11 +359,8 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
         gCustomBaseClassImport = [baseClassImport retain];
     }
 
-    NSString * mfilePath = includem;
-    NSString * hfilePath = includeh;
-    
-    NSMutableString * mfileContent = [NSMutableString stringWithString:@""];
-    NSMutableString * hfileContent = [NSMutableString stringWithString:@""];
+    NSMutableString *mFileContent = [NSMutableString stringWithString:@""];
+    NSMutableString *hFileContent = [NSMutableString stringWithString:@""];
     
     [self validateOutputPath:outputDir forType:@"Output"];
     [self validateOutputPath:machineDir forType:@"Machine Output"];
@@ -376,35 +373,13 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
     if (humanDir == nil)
         humanDir = outputDir;
 
-    NSFileManager *fm = [NSFileManager defaultManager];
-    
     if (_orphaned) {
         [self printOrphanedFileNames];
     
         return EXIT_SUCCESS;
     }
     
-    if (templatePath) {
-        
-        NSString* absoluteTemplatePath = nil;
-        
-        if (![templatePath isAbsolutePath]) {
-            absoluteTemplatePath = [[origModelBasePath stringByAppendingPathComponent:templatePath] stringByStandardizingPath];
-            
-            // Be kind and try a relative Path of the parent xcdatamodeld folder of the model, if it exists
-            if ((![fm fileExistsAtPath:absoluteTemplatePath]) && ([[origModelBasePath pathExtension] isEqualToString:@"xcdatamodeld"])) {
-                absoluteTemplatePath = [[[origModelBasePath stringByDeletingLastPathComponent] stringByAppendingPathComponent:templatePath] stringByStandardizingPath];
-            }
-        } else {
-            absoluteTemplatePath = templatePath;
-        }
-
-        
-        // if the computed absoluteTemplatePath exists, use it.
-        if ([fm fileExistsAtPath:absoluteTemplatePath]) {
-            templatePath = absoluteTemplatePath;
-        }
-    }
+    [self standardizeTemplatePath];
     
     int machineFilesGenerated = 0;        
     int humanFilesGenerated = 0;
@@ -412,47 +387,47 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
     if (model) {
         MiscMergeEngine *machineH = nil;
         MiscMergeEngine *machineM = nil;
-        MiscMergeEngine *humanH = nil;
-        MiscMergeEngine *humanM = nil;
+        MiscMergeEngine *humanH   = nil;
+        MiscMergeEngine *humanM   = nil;
 
         if (_swift) {
             machineH = [[self templateDescNamed:@"machine.swift.motemplate"] engine];
             assert(machineH);
-            humanH = [[self templateDescNamed:@"human.swift.motemplate"] engine];
+            humanH   = [[self templateDescNamed:@"human.swift.motemplate"] engine];
             assert(humanH);
         } else {
             machineH = [[self templateDescNamed:@"machine.h.motemplate"] engine];
             assert(machineH);
             machineM = [[self templateDescNamed:@"machine.m.motemplate"] engine];
             assert(machineM);
-            humanH = [[self templateDescNamed:@"human.h.motemplate"] engine];
+            humanH   = [[self templateDescNamed:@"human.h.motemplate"] engine];
             assert(humanH);
-            humanM = [[self templateDescNamed:@"human.m.motemplate"] engine];
+            humanM   = [[self templateDescNamed:@"human.m.motemplate"] engine];
             assert(humanM);
         }
 
         // Add the template var dictionary to each of the merge engines
         [machineH setEngineValue:templateVar forKey:kTemplateVar];
         [machineM setEngineValue:templateVar forKey:kTemplateVar];
-        [humanH setEngineValue:templateVar forKey:kTemplateVar];
-        [humanM setEngineValue:templateVar forKey:kTemplateVar];
-        
-        NSMutableArray  *humanMFiles = [NSMutableArray array],
-                        *humanHFiles = [NSMutableArray array],
-                        *machineMFiles = [NSMutableArray array],
-                        *machineHFiles = [NSMutableArray array];
+        [humanH   setEngineValue:templateVar forKey:kTemplateVar];
+        [humanM   setEngineValue:templateVar forKey:kTemplateVar];
+    
+        NSMutableArray *humanMFiles   = [NSMutableArray array];
+        NSMutableArray *humanHFiles   = [NSMutableArray array];
+        NSMutableArray *machineMFiles = [NSMutableArray array];
+        NSMutableArray *machineHFiles = [NSMutableArray array];
         
         for (NSEntityDescription *entity in [model entitiesWithACustomSubclassInConfiguration:configuration verbose:YES]) {
             NSString *generatedMachineH = [machineH executeWithObject:entity sender:nil];
             NSString *generatedMachineM = [machineM executeWithObject:entity sender:nil];
-            NSString *generatedHumanH = [humanH executeWithObject:entity sender:nil];
-            NSString *generatedHumanM = [humanM executeWithObject:entity sender:nil];
+            NSString *generatedHumanH   = [humanH   executeWithObject:entity sender:nil];
+            NSString *generatedHumanM   = [humanM   executeWithObject:entity sender:nil];
             
             // remove unnecessary empty lines
             generatedMachineH = [generatedMachineH stringByReplacingOccurrencesOfRegex:@"([ \t]*(\n|\r|\r\n)){2,}" withString:@"\n\n"];
             generatedMachineM = [generatedMachineM stringByReplacingOccurrencesOfRegex:@"([ \t]*(\n|\r|\r\n)){2,}" withString:@"\n\n"];
-            generatedHumanH = [generatedHumanH stringByReplacingOccurrencesOfRegex:@"([ \t]*(\n|\r|\r\n)){2,}" withString:@"\n\n"];
-            generatedHumanM = [generatedHumanM stringByReplacingOccurrencesOfRegex:@"([ \t]*(\n|\r|\r\n)){2,}" withString:@"\n\n"];
+            generatedHumanH   = [generatedHumanH   stringByReplacingOccurrencesOfRegex:@"([ \t]*(\n|\r|\r\n)){2,}" withString:@"\n\n"];
+            generatedHumanM   = [generatedHumanM   stringByReplacingOccurrencesOfRegex:@"([ \t]*(\n|\r|\r\n)){2,}" withString:@"\n\n"];
             
             NSString *entityClassName = [entity managedObjectClassName];
             BOOL machineDirtied = NO;
@@ -464,9 +439,8 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
             if (_listSourceFiles) {
                 [machineHFiles addObject:machineHFileName];
             } else {
-                if (![fm regularFileExistsAtPath:machineHFileName] || ![generatedMachineH isEqualToString:[NSString stringWithContentsOfFile:machineHFileName encoding:NSUTF8StringEncoding error:nil]]) {
-                    //  If the file doesn't exist or is different than what we just generated, write it out.
-                    [generatedMachineH writeToFile:machineHFileName atomically:NO encoding:NSUTF8StringEncoding error:nil];
+                BOOL saved = [self saveMachineFileAtPath:machineHFileName content:generatedMachineH];
+                if (saved) {
                     machineDirtied = YES;
                     machineFilesGenerated++;
                 }
@@ -480,9 +454,8 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
                 if (_listSourceFiles) {
                     [machineMFiles addObject:machineMFileName];
                 } else {
-                    if (![fm regularFileExistsAtPath:machineMFileName] || ![generatedMachineM isEqualToString:[NSString stringWithContentsOfFile:machineMFileName encoding:NSUTF8StringEncoding error:nil]]) {
-                        //  If the file doesn't exist or is different than what we just generated, write it out.
-                        [generatedMachineM writeToFile:machineMFileName atomically:NO encoding:NSUTF8StringEncoding error:nil];
+                    BOOL saved = [self saveMachineFileAtPath:machineMFileName content:generatedMachineM];
+                    if (saved) {
                         machineDirtied = YES;
                         machineFilesGenerated++;
                     }
@@ -495,40 +468,28 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
             if (_listSourceFiles) {
                 [humanHFiles addObject:humanHFileName];
             } else {
-                if ([fm regularFileExistsAtPath:humanHFileName]) {
-                    if (machineDirtied)
-                        [fm touchPath:humanHFileName];
-                } else {
-                    [generatedHumanH writeToFile:humanHFileName atomically:NO encoding:NSUTF8StringEncoding error:nil];
+                BOOL saved = [self saveHumanFileAtPath:humanHFileName content:generatedHumanH touchExisting:machineDirtied];
+                if (saved) {
                     humanFilesGenerated++;
                 }
             }
 
             if (!_swift) {
-                //  Human source files.
-                NSString *humanMFileName = [humanDir stringByAppendingPathComponent:
-                    [NSString stringWithFormat:@"%@.m", entityClassName]];
-                NSString *humanMMFileName = [humanDir stringByAppendingPathComponent:
-                    [NSString stringWithFormat:@"%@.mm", entityClassName]];
-                if (![fm regularFileExistsAtPath:humanMFileName] && [fm regularFileExistsAtPath:humanMMFileName]) {
-                    //  Allow .mm human files as well as .m files.
-                    humanMFileName = humanMMFileName;
-                }
+                NSString *humanMFileName = [self humanMFileNameForEntityClassName:entityClassName];
+    
                 if (_listSourceFiles) {
                     [humanMFiles addObject:humanMFileName];
                 } else {
-                    if ([fm regularFileExistsAtPath:humanMFileName]) {
-                        if (machineDirtied)
-                            [fm touchPath:humanMFileName];
-                    } else {
-                        [generatedHumanM writeToFile:humanMFileName atomically:NO encoding:NSUTF8StringEncoding error:nil];
+                    BOOL saved = [self saveHumanFileAtPath:humanMFileName content:generatedHumanM touchExisting:machineDirtied];
+                    if (saved) {
                         humanFilesGenerated++;
                     }
                 }
+    
+                [mFileContent appendFormat:@"#import \"%@\"\n",   humanMFileName.lastPathComponent];
+                [mFileContent appendFormat:@"#import \"%@\"\n", machineMFileName.lastPathComponent];
                 
-                [mfileContent appendFormat:@"#import \"%@\"\n#import \"%@\"\n",
-                    [humanMFileName lastPathComponent], [machineMFileName lastPathComponent]];
-                [hfileContent appendFormat:@"#import \"%@\"\n", [humanHFileName lastPathComponent]];
+                [hFileContent appendFormat:@"#import \"%@\"\n",   humanHFileName.lastPathComponent];
             }
         }
         
@@ -542,28 +503,103 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
         }
     }
     
-    bool mfileGenerated = NO;
-    if (mfilePath && ![mfileContent isEqualToString:@""] && (![fm regularFileExistsAtPath:mfilePath] || ![[NSString stringWithContentsOfFile:mfilePath encoding:NSUTF8StringEncoding error:nil] isEqualToString:mfileContent])) {
-        [mfileContent writeToFile:mfilePath atomically:NO encoding:NSUTF8StringEncoding error:nil];
-        mfileGenerated = YES;
-    }
-
-    bool hfileGenerated = NO;
-    if (hfilePath && ![hfileContent isEqualToString:@""] && (![fm regularFileExistsAtPath:hfilePath] || ![[NSString stringWithContentsOfFile:hfilePath encoding:NSUTF8StringEncoding error:nil] isEqualToString:hfileContent])) {
-        [hfileContent writeToFile:hfilePath atomically:NO encoding:NSUTF8StringEncoding error:nil];
-        hfileGenerated = YES;
-    }
+    NSString *mFilePath = includem;
+    BOOL mFileGenerated = [self generateFileAtPath:mFilePath content:mFileContent];
+    
+    NSString *hFilePath = includeh;
+    BOOL hFileGenerated = [self generateFileAtPath:hFilePath content:hFileContent];
 
     if (!_listSourceFiles) {
         printf("%d machine files%s %d human files%s generated.\n", machineFilesGenerated,
-               (mfileGenerated ? "," : " and"), humanFilesGenerated, (mfileGenerated ? " and one include.m file" : ""));
+               (mFileGenerated ? "," : " and"), humanFilesGenerated, (mFileGenerated ? " and one include.m file" : ""));
 
-        if (hfileGenerated) {
-            printf("Aggregate header file was also generated to %s.\n", [hfilePath fileSystemRepresentation]);
+        if (hFileGenerated) {
+            printf("Aggregate header file was also generated to %s.\n", [hFilePath fileSystemRepresentation]);
         }
     }
     
     return EXIT_SUCCESS;
+}
+
+- (NSString *)humanMFileNameForEntityClassName:(NSString *)entityClassName
+{
+    NSFileManager *fm = [NSFileManager defaultManager];
+    
+    //  Human source files.
+    NSString * humanMFileName = [humanDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.m" , entityClassName]];
+    NSString *humanMMFileName = [humanDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mm", entityClassName]];
+    
+    if (![fm regularFileExistsAtPath:humanMFileName] && [fm regularFileExistsAtPath:humanMMFileName]) {
+        //  Allow .mm human files as well as .m files.
+        humanMFileName = humanMMFileName;
+    }
+    
+    return humanMFileName;
+}
+
+- (BOOL)saveHumanFileAtPath:(NSString *)path content:(NSString *)content touchExisting:(BOOL)touch
+{
+    NSFileManager *fm = [NSFileManager defaultManager];
+    
+    if ([fm regularFileExistsAtPath:path]) {
+        if (touch) {
+            [fm touchPath:path];
+        }
+    } else {
+        [content writeToFile:path atomically:NO encoding:NSUTF8StringEncoding error:nil];
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)saveMachineFileAtPath:(NSString *)path content:(NSString *)content
+{
+    NSString *existingMachineM = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    if (![content isEqualToString:existingMachineM]) {
+        //  If the file doesn't exist or is different than what we just generated, write it out.
+        [content writeToFile:path atomically:NO encoding:NSUTF8StringEncoding error:nil];
+        return YES;
+    }
+    return NO;
+}
+
+- (void)standardizeTemplatePath
+{
+    if (templatePath) {
+        NSFileManager *fm = [NSFileManager defaultManager];
+        
+        NSString *absoluteTemplatePath = nil;
+        
+        if (![templatePath isAbsolutePath]) {
+            absoluteTemplatePath = [[origModelBasePath stringByAppendingPathComponent:templatePath] stringByStandardizingPath];
+            
+            // Be kind and try a relative Path of the parent xcdatamodeld folder of the model, if it exists
+            if ((![fm fileExistsAtPath:absoluteTemplatePath]) && ([[origModelBasePath pathExtension] isEqualToString:@"xcdatamodeld"])) {
+                absoluteTemplatePath = [[[origModelBasePath stringByDeletingLastPathComponent] stringByAppendingPathComponent:templatePath] stringByStandardizingPath];
+            }
+        } else {
+            absoluteTemplatePath = templatePath;
+        }
+        
+        // if the computed absoluteTemplatePath exists, use it.
+        if ([fm fileExistsAtPath:absoluteTemplatePath]) {
+            templatePath = absoluteTemplatePath;
+        }
+    }
+}
+
+- (bool)generateFileAtPath:(NSString *)path content:(NSString *)content
+{
+    NSFileManager *fm = [NSFileManager defaultManager];
+    
+    BOOL const shouldWriteToFile = path && ![content isEqualToString:@""] && (![fm regularFileExistsAtPath:path] || ![[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] isEqualToString:content]);
+    
+    if (shouldWriteToFile) {
+        [content writeToFile:path atomically:NO encoding:NSUTF8StringEncoding error:nil];
+    }
+    
+    return shouldWriteToFile;
 }
 
 - (void)printOrphanedFileNames
